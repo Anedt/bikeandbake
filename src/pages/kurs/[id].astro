@@ -1,0 +1,27 @@
+---
+
+---
+
+<MainLayout title={myData.Tittel}>
+
+    <h1>{myData.Tittel}</h1>
+    <div class="grid_1-1">
+        <div>
+        <img src={myData.img} alt="kurs">
+    </div>
+    <div>
+        <h3>Dato:</h3> <p>{myData.date}</p>
+    <h3>Sted:</h3> <p>{myData.place}</p>
+       <h3>Antal Pladser:</h3> <p>{myData.spots}</p>
+    </div>
+    <div>
+        <h3>Hvad går kurset ud på?</h3>
+        <p>{myData.info}</p>
+    </div>
+    <div>
+        <img src={myData.illustrasjon} alt="illustrasjon">
+    </div>
+    </div>
+
+
+</MainLayout>
