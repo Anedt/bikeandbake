@@ -14,13 +14,19 @@ html {
 
   --primary-line-height: 1.5;
 
+  --primary-font-weight: 400;
+
+  --secondary-font-weight: 600;
+
   --primary-list-style: none;
 
-  --primary-font-size: 3rem;
+  --primary-font-size: 64px;
   /*h1*/
-  --secondary-font-size: 2rem;
+  --secondary-font-size: 40px;
   /*h2*/
-  --tertiary-font-size: 28px;
+  --tertiary-font-size: 37px;
+  /*h3*/
+  --quaternary-font-size: 20px;
   /*p*/
 }
 
@@ -33,24 +39,24 @@ body {
 
 /* TEKST START*/
 h1 {
-  font-family: var(--secondary-font);
-  color: var(--quaternary);
+  font-family: var(--primary-font);
+  color: var(--tertiary);
   font-size: var(--primary-font-size);
-  margin-top: 30px;
+  font-weight: var(--secondary-font-weight);
 }
 
 h2 {
   font-family: var(--primary-font);
-  color: var(--tertiary);
+  color: var(--primary);
   font-size: var(--secondary-font-size);
-  margin-top: 10px;
-  margin-bottom: 10px;
+  font-weight: var(--primary-font-weight);
 }
 
 h3 {
   font-family: var(--primary-font);
-  color: var(--quinary);
-  font-size: var(--tertiary-font-size);
+  color: var(--quaternary);
+  font-size: var(--secondary-font-size);
+  font-weight: var(--secondary-font-weight);
 }
 
 p {
@@ -58,27 +64,18 @@ p {
   color: var(--primary);
   font-size: var(--quaternary-font-size);
   line-height: var(--primary-line-height);
+  font-weight: var(--primary-font-weight);
 }
-
 a {
   font-family: var(--primary-font);
   color: var(--primary);
   font-size: var(--quaternary-font-size);
+  font-weight: var(--primary-font-weight);
 }
 
 footer {
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
   padding: 50px;
   margin-top: 150px;
 }
-p {
-  font-family: "vollkorn", serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
-h1 {
-  font-family: "vollkorn", serif;
-  font-weight: 600;
-  font-style: normal;
-}
