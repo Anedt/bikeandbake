@@ -1,0 +1,74 @@
+html {
+  --primary: black;
+  /*tekst*/
+  --secondary: #fbf8f5;
+  /*html*/
+  --tertiary: #285632;
+  /*h1*/
+  --quaternary: #cd3a25;
+  /*h2*/
+  --quinary: #5b8b66;
+  /*hover*/
+
+  --primary-font: " poppins", sans-serif;
+
+  --primary-line-height: 1.5;
+
+  --primary-list-style: none;
+
+  --primary-font-size: 3rem;
+  /*h1*/
+  --secondary-font-size: 2rem;
+  /*h2*/
+  --tertiary-font-size: 28px;
+  /*p*/
+
+}
+
+body {
+  background-color: var(--secondary);
+  font-family: var(--primary-font);
+  list-style: var(--primary-list-style);
+  line-height: var(--primary-line-height);
+}
+
+/* TEKST START*/
+h1 {
+  font-family: var(--secondary-font);
+  color: var(--quaternary);
+  font-size: var(--primary-font-size);
+  margin-top: 30px;
+}
+
+h2 {
+  font-family: var(--primary-font);
+  color: var(--tertiary);
+  font-size: var(--secondary-font-size);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: var(--primary-font);
+  color: var(--quinary);
+  font-size: var(--tertiary-font-size);
+}
+
+p {
+  font-family: var(--primary-font);
+  color: var(--primary);
+  font-size: var(--quaternary-font-size);
+  line-height: var(--primary-line-height);
+}
+
+a {
+  font-family: var(--primary-font);
+  color: var(--primary);
+  font-size: var(--quaternary-font-size);
+}
+
+footer {
+  background-color: var(--tertiary);
+  padding: 50px;
+  margin-top: 150px;
+}
