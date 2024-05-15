@@ -1,7 +1,7 @@
 html {
   --primary: black;
   /*tekst*/
-  --secondary: #fbf8f5;
+  --secondary: #f3ece3;
   /*html*/
   --tertiary: #285632;
   /*h1*/
@@ -78,5 +78,3 @@ footer {
   padding: 50px;
   margin-top: 150px;
 }
-
-
