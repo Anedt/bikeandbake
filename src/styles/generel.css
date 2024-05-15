@@ -28,6 +28,7 @@ html {
   /*h3*/
   --quaternary-font-size: 20px;
   /*p*/
+  /*boks.button*/
 }
 
 body {
@@ -56,6 +57,13 @@ h3 {
   font-family: var(--primary-font);
   color: var(--quaternary);
   font-size: var(--secondary-font-size);
+  font-weight: var(--secondary-font-weight);
+}
+
+h4 {
+  font-family: var(--primary-font);
+  color: var(--tertiary);
+  font-size: var(--quaternary-font-size);
   font-weight: var(--secondary-font-weight);
 }
 

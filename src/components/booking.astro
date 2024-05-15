@@ -1,9 +1,9 @@
 ---
-
+import Button from "../components/Button.astro";
 ---
 
 <div class="form-felt">
-  <h1>Book catering</h1>
+  <h2>Book catering</h2>
   <label>
     <p>Fulde navn</p>
     <input type="text" name="navn" required />
@@ -28,14 +28,32 @@
     Ekstra info
     <textarea name="besked" rows"5"></textarea>
   </label>
-  <label>
-    <input type="button" name="button" />
-  </label>
+  <Button />
 </div>
 
 <style>
   .form-felt {
     border-radius: 25px;
     border: 2px solid #285632;
+    height: 500px;
+    width: 400px;
+  }
+  h2 {
+    text-align: center;
+  }
+  .form-felt {
+  }
+
+  input {
+    border: 1px solid #285632;
+    background-color: transparent;
+    border-radius: 10px;
+    height: 30px;
+  }
+  textarea {
+    border: 2px solid #285632;
+    background-color: transparent;
+    border-radius: 25px;
+    height: 100px;
   }
 </style>
