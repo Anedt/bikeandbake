@@ -1,8 +1,36 @@
-<div><a href="/"><img src="" alt=""></a> 
+---
 
+---
 
-
-
-
-    
+<div class="logo">
+  <a href="index.astro">
+    <img src="/public/img/logo.webp" alt="logo" loading="lazy" />
+  </a>
 </div>
+
+<ul class="menu">
+  <li><a href="book.astro">Book catering</a></li>
+  <li><a href="kursus.astro">Madlavningskurser</a></li>
+  <li><a href="mad.astro">Vores mad</a></li>
+  <li><a href="galleri.astro">Galleri</a></li>
+</ul>
+
+<style>
+  img {
+    width: 100px;
+    z-index: 1;
+  }
+  a:hover {
+    box-shadow: inset 0 -2px 0 #5b8b66;
+    color: #5b8b66;
+    transition: color 0.3s ease;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 4em;
+    z-index: 2;
+    
+  }
+</style>

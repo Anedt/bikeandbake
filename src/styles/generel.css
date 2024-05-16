@@ -74,11 +74,14 @@ p {
   line-height: var(--primary-line-height);
   font-weight: var(--primary-font-weight);
 }
-a {
+a,
+li {
   font-family: var(--primary-font);
   color: var(--primary);
   font-size: var(--quaternary-font-size);
   font-weight: var(--primary-font-weight);
+  list-style: none;
+  text-decoration: none;
 }
 
 footer {
