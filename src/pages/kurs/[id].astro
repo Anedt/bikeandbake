@@ -1,8 +1,30 @@
 ---
+import type { GetStaticPaths } from "astro";
 import Layout from "../../MainLayout.astro"
-import Style from "../../styles/generel.css"
+import Kurs from "../kurs.astro";
 
+export async function getStaticPaths () {
+const data = await fetch (
+"https://fisxfvyrriqnsrbvxcmu.supabase.co",
+{
+    method: "GET",
+    headers: {
+        "apikey": 
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZpc3hmdnlycmlxbnNyYnZ4Y211Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU4NDg5MDgsImV4cCI6MjAzMTQyNDkwOH0.5lrBoPFJ4FjT9V9DBJyvo0pcABFHQsghMHx2TlHhV3o",
+    },
+}
+).then ((res) => res.json());
 
+return data.map((kurs) => {
+    return {
+        params: { id: kurs.id },
+       props: {myData: kurs},
+
+    };
+});
+}
+  const { myData } = Astro.props;
+  console.log(myData);
 ---
 
 <MainLayout title={myData.Tittel}>
