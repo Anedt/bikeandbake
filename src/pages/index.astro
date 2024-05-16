@@ -18,10 +18,10 @@ import Navigation from "../components/Navigation.astro";
     <title>Astro</title>
   </head>
   <body>
+    <Navigation />
     <main>
-      <Navigation />
       <img class="ciao" src="/public/img/ciao.webp" alt="" />
-      <Booking />
+      <Booking class="Booking" />
       <img class="blomst" src="/public/img/blomst-2.webp" alt="" />
       <p>
         Send en forspørgsel ved at udfylde formularen. Du bliver herefter
@@ -42,10 +42,25 @@ import Navigation from "../components/Navigation.astro";
 
 <style>
   img.ciao {
-    margin-left: 280px;
-    z-index: 1;
+    left: 300px;
+    top: 50px;
+    z-index: 2;
+    position: absolute;
   }
   img.blomst {
     max-width: 180px;
+    z-index: 2;
+    position: absolute;
+  }
+  .Booking {
+    z-index: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  main {
+    height: 100vh;
+    padding: 0 55px;
+    box-sizing: border-box;
   }
 </style>

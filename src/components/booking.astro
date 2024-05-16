@@ -2,40 +2,42 @@
 import Button from "../components/Button.astro";
 ---
 
-<div class="form-felt">
-  <h2>Book catering</h2>
-  <label>
-    <p>Fulde navn</p>
-    <input type="text" name="navn" required />
-  </label>
-  <label>
-    Email
-    <input type="email" name="email" required />
-  </label>
-  <label>
-    Antal personer
-    <input type="number" name="email" required />
-  </label>
-  <label>
-    Dato
-    <input type="date" name="navn" required />
-  </label>
-  <label>
-    Lokation
-    <input type="text" name="lokation" required />
-  </label>
-  <label>
-    Ekstra info
-    <textarea name="besked" rows"1"></textarea>
-  </label>
+<div class="form-felt2">
+  <div class="form-felt">
+    <h2>Book catering</h2>
+    <label>
+      Fulde navn
+      <input type="text" name="navn" required />
+    </label>
+    <label>
+      Email
+      <input type="email" name="email" required />
+    </label>
+    <label>
+      Antal pers.
+      <input type="number" name="email" required />
+    </label>
+    <label>
+      Dato
+      <input type="date" name="navn" required />
+    </label>
+    <label>
+      Lokation
+      <input type="text" name="lokation" required />
+    </label>
+    <label>
+      Ekstra info
+      <textarea name="besked" rows"1"></textarea>
+    </label>
+  </div>
 </div>
 
 <style>
   .form-felt {
-    border-radius: 25px;
+    border-radius: 15px;
     border: 2px solid #285632;
-    height: 500px;
-    width: 400px;
+    height: 600px;
+    width: 300px;
     padding: 10px;
   }
   h2 {
@@ -43,18 +45,20 @@ import Button from "../components/Button.astro";
   }
 
   input {
-    border: 1px solid #285632;
+    display: block;
+    border: none;
+    border-bottom: 2px solid #285632;
     background-color: transparent;
-    border-radius: 10px;
     height: 30px;
-    margin: 5px;
+    margin: 10px 0;
+    padding: 5px;
   }
   textarea {
     border: 2px solid #285632;
     background-color: transparent;
-    border-radius: 25px;
-    height: 100px;
+    border-radius: 15px;
+    height: 30px;
     max-height: 800px;
-    width: 300px;
+    width: 250px;
   }
 </style>
