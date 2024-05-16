@@ -2,19 +2,20 @@
 
 ---
 
-<div class="logo">
-  <a href="index.astro">
-    <img src="/public/img/logo.webp" alt="logo" loading="lazy" />
-  </a>
+<div class="header">
+  <div class="logo">
+    <a href="index.astro">
+      <img src="/public/img/logo.webp" alt="logo" loading="lazy" />
+    </a>
+  </div>
+
+  <ul class="menu">
+    <li><a href="book.astro">Book catering</a></li>
+    <li><a href="kursus.astro">Madlavningskurser</a></li>
+    <li><a href="mad.astro">Vores mad</a></li>
+    <li><a href="galleri.astro">Galleri</a></li>
+  </ul>
 </div>
-
-<ul class="menu">
-  <li><a href="book.astro">Book catering</a></li>
-  <li><a href="kursus.astro">Madlavningskurser</a></li>
-  <li><a href="mad.astro">Vores mad</a></li>
-  <li><a href="galleri.astro">Galleri</a></li>
-</ul>
-
 <style>
   img {
     width: 100px;
@@ -28,9 +29,18 @@
   .menu {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 4em;
     z-index: 2;
-    
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+  }
+  .header {
+    position: sticky;
+    background-color: rgba(243, 234, 224, 0.8);
+    top: 0;
+    z-index: 3;
   }
 </style>
