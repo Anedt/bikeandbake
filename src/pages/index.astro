@@ -1,7 +1,6 @@
 ---
 import Booking from "../components/booking.astro";
 import "../styles/generel.css";
-import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
 ---
@@ -43,14 +42,16 @@ import Navigation from "../components/Navigation.astro";
 <style>
   img.ciao {
     left: 300px;
-    top: 50px;
+    top: 130px;
     z-index: 2;
     position: absolute;
   }
   img.blomst {
-    max-width: 180px;
+    max-width: 150px;
     z-index: 2;
     position: absolute;
+    top: 555px;
+    left: -50px;
   }
   .Booking {
     z-index: 1;
@@ -62,5 +63,32 @@ import Navigation from "../components/Navigation.astro";
     height: 100vh;
     padding: 0 55px;
     box-sizing: border-box;
+    margin-top: 100px;
+  }
+
+  /* web */
+  @media screen and (min-width: 768px) {
+    main {
+      padding: 0 280px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 50px;
+    }
+    img.ciao {
+      left: 530px;
+      top: 130px;
+      z-index: 2;
+      position: absolute;
+    }
+    img.blomst {
+      top: 555px;
+      left: 120px;
+      max-width: 150px;
+      z-index: 2;
+      position: absolute;
+    }
+    p {
+      grid-column: 2; /* Placer alle <p> i det andet grid column (højre side) */
+    }
   }
 </style>
