@@ -56,7 +56,7 @@ h2 {
 h3 {
   font-family: var(--primary-font);
   color: var(--quaternary);
-  font-size: var(--secondary-font-size);
+  font-size: var(--quaternary-font-size);
   font-weight: var(--secondary-font-weight);
 }
 

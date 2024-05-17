@@ -25,17 +25,17 @@ import Navigation from "../components/Navigation.astro";
       <p>
         Send en forspørgsel ved at udfylde formularen. Du bliver herefter
         kontaktet af os og derfra vil vi i fællesskab planlægge detaljerne
-        omkring bookingen.
-      </p>
-      <p>
-        Vi forbeholder os retten til at acceptere en forspørgsel, hvis vi ikke
-        har tid eller kapacitet på den valgte dato.
-      </p>
-      <p>
-        Hvis du er nysgerrig på at vide mere? så tag kontakt og få en
-        uforpligtende samtale
+        omkring bookingen. <p>
+          Hvis du er nysgerrig på at vide mere? så tag kontakt og få en
+          uforpligtende samtale
+        </p>
+        <p>
+          Vi forbeholder os retten til ikke at acceptere en forspørgsel, hvis vi
+          ikke har tid eller kapacitet på den valgte dato.
+        </p>
       </p>
     </main>
+    <Footer/>
   </body>
 </html>
 
@@ -88,7 +88,8 @@ import Navigation from "../components/Navigation.astro";
       position: absolute;
     }
     p {
-      grid-column: 2; /* Placer alle <p> i det andet grid column (højre side) */
+      grid-column: 2;
+      position: static;
     }
   }
 </style>
