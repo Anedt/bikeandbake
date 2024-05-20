@@ -1,52 +1,63 @@
 ---
-import type { GetStaticPaths } from "astro";
-import Layout from "../../MainLayout.astro"
-import Kurs from "../kurs.astro";
+import MainLayout from "../../MainLayout.astro";
 
-export async function getStaticPaths () {
-const data = await fetch (
-"https://fisxfvyrriqnsrbvxcmu.supabase.co",
+// "https://fisxfvyrriqnsrbvxcmu.supabase.co"
+
+export async function getStaticPaths () { 
+    const data = await fetch(
+    "https://fisxfvyrriqnsrbvxcmu.supabase.co/rest/v1/kursurs",
 {
     method: "GET",
     headers: {
-        "apikey": 
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZpc3hmdnlycmlxbnNyYnZ4Y211Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU4NDg5MDgsImV4cCI6MjAzMTQyNDkwOH0.5lrBoPFJ4FjT9V9DBJyvo0pcABFHQsghMHx2TlHhV3o",
+        
     },
 }
 ).then ((res) => res.json());
 
 return data.map((kurs) => {
-    return {
-        params: { id: kurs.id },
-       props: {myData: kurs},
+return {
+  params: { id: kurs.id },
+ props: {myData: kurs},
 
-    };
+ };
 });
+
 }
   const { myData } = Astro.props;
   console.log(myData);
+
 ---
 
 <MainLayout title={myData.Tittel}>
 
-    <h1>{myData.Tittel}</h1>
-    <div class="grid_1-1">
-        <div>
-        <img src={myData.img} alt="kurs">
-    </div>
+<h1>{myData.Tittel}</h1>
+<div class="grid_1-1">
     <div>
-        <h3>Dato:</h3> <p>{myData.date}</p>
-    <h3>Sted:</h3> <p>{myData.place}</p>
-       <h3>Antal Pladser:</h3> <p>{myData.spots}</p>
-    </div>
-    <div>
-        <h3>Hvad går kurset ud på?</h3>
-        <p>{myData.info}</p>
-    </div>
-    <div>
-        <img src={myData.illustrasjon} alt="illustrasjon">
-    </div>
-    </div>
-
+    <img src={myData.img} alt="kurs">
+</div>
+<div>
+    <h3>Dato:</h3> <p>{myData.date}</p>
+<h3>Sted:</h3> <p>{myData.place}</p>
+   <h3>Antal Pladser:</h3> <p>{myData.spots}</p>
+</div>
+<div>
+    <h3>Hvad går kurset ud på?</h3>
+    <p>{myData.info}</p>
+</div>
+<div>
+    <img src={myData.illustrasjon} alt="illustrasjon">
+</div>
+</div>
 
 </MainLayout>
+
+<style>
+    .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    img {
+        width: 100%;
+    }
+</style>
