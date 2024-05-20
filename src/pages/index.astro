@@ -36,7 +36,7 @@ import Button from "../components/Button.astro";
         <img src="/public/img/index3.webp" alt="" />
       </div>
       <div>
-        <img src="/public/img/index3.webp" alt="" />
+        <img src="/public/img/index4.webp" alt="" />
       </div>
       <div>
         <img class="blade" src="/public/img/blade.webp" alt="" />
@@ -119,5 +119,11 @@ import Button from "../components/Button.astro";
   }
   img {
     max-width: 80%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .bike img {
+      display: none;
+    }
   }
 </style>
