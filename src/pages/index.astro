@@ -3,6 +3,7 @@ import Booking from "../components/booking.astro";
 import "../styles/generel.css";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
+import Button from "../components/Button.astro";
 ---
 
 <html lang="en">
@@ -19,77 +20,86 @@ import Navigation from "../components/Navigation.astro";
   <body>
     <Navigation />
     <main>
-      <img class="ciao" src="/public/img/ciao.webp" alt="" />
-      <Booking class="Booking" />
-      <img class="blomst" src="/public/img/blomst-2.webp" alt="" />
-      <p>
-        Send en forspørgsel ved at udfylde formularen. Du bliver herefter
-        kontaktet af os og derfra vil vi i fællesskab planlægge detaljerne
-        omkring bookingen. <p>
-          Hvis du er nysgerrig på at vide mere? så tag kontakt og få en
-          uforpligtende samtale
+      <div>
+        <h1>Bake and Bake</h1>
+        <h2>Book din personlige pizzabager</h2>
+        <p>
+          Bike and bake kommer hjem til dig og giver dig en autentisk pizza
+          oplevelse. Vi kan bookes til små og store arrangementer - og tilpasser
+          os til dit behov og dit hjem.
+        </p>
+        <img src="/public/img/pizzabike.webp" alt="bike" />
+      </div>
+      <div>
+        <img src="/public/img/index1.webp" alt="" />
+        <img src="/public/img/index2.webp" alt="" />
+        <img src="/public/img/index3.webp" alt="" />
+      </div>
+      <div>
+        <img src="/public/img/index3.webp" alt="" />
+      </div>
+      <div>
+        <img class="blade" src="/public/img/blade.webp" alt="" />
+        <h3>Om os</h3>
+        <p>
+          Bike and Bake, er et catering firma, som startede med ideen om at
+          kunne bringe den autentiske italienske pizza oplevelse rundt.  Vi er
+          et catering firma som kommer ud til både private arrangementer og til
+          firmaaarngementer. Vi tilbyder italiensk mad, såsom antipasti, salat,
+          pizza og dessert. Vi bringer ikke den færdige mad, men vi laver den
+          foran vores gæster. Derudover kan man også opleve os på markeder og
+          festivaler
+        </p>
+      </div>
+      <div>
+        <img class="knallert" src="/public/img/knaller.webp" alt="" />
+        <Booking />
+        <img class="pizza3" src="/public/img/pizza3.web" alt="" />
+        <img class="pizza1" src="/public/img/pizza3" alt="" />
+        <img class="ciao" src="/public/img/bestik.webp" alt="" />
+      </div>
+      <div>
+        <img src="/public/img/index3.webp" alt="" />
+        <img src="/public/img/index6.webp" alt="" />
+        <img src="/public/img/index1.webp" alt="" />
+      </div>
+      <div>
+        <img class="ciao" src="/public/img/ovn.webp" alt="" />
+        <p>
+          Vil du gerne udvide din viden indenfor det italienske køkken, eller
+          lære hvordan man laver den bedste pizzadej? Så kan du nu booke et
+          madkursus hos Michele! Vi tilbyder madkurser indenfor pizza,
+          antipasti, dessert og pasta .
         </p>
         <p>
-          Vi forbeholder os retten til ikke at acceptere en forspørgsel, hvis vi
-          ikke har tid eller kapacitet på den valgte dato.
+          Bake and bake er et cateringfirma som Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum
         </p>
-      </p>
+        <h2>Vi tilbyder nu madlavningskurser</h2>
+        <Button>Læs om tilbudet</Button>
+      </div>
+      <div>
+        <img src="/public/img/pizza3.webp" alt="" />
+        <img src="/public/img/pasta.webp" alt="" />
+        <img src="/public/img/slice.webp" alt="" />
+        <img src="/public/img/antipasti.webp" alt="" />
+        <img src="/public/img/is.webp" alt="" />
+        <img src="/public/img/pizza2.web" alt="" />
+        <img src="/public/img/pasta.webp" alt="" />
+        <img src="/public/img/slice.webp" alt="" />
+        <img src="/public/img/antipasti.webp" alt="" />
+        <img src="/public/img/is.webp" alt="" />
+        <img src="/public/img/pizza2.webp" alt="" />
+      </div>
     </main>
-    <Footer/>
   </body>
+  <Footer />
 </html>
 
-<style>
-  img.ciao {
-    left: 300px;
-    top: 130px;
-    z-index: 2;
-    position: absolute;
-  }
-  img.blomst {
-    max-width: 150px;
-    z-index: 2;
-    position: absolute;
-    top: 555px;
-    left: -50px;
-  }
-  .Booking {
-    z-index: 1;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  main {
-    height: 100vh;
-    padding: 0 55px;
-    box-sizing: border-box;
-    margin-top: 100px;
-  }
-
-  /* web */
-  @media screen and (min-width: 768px) {
-    main {
-      padding: 0 280px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 50px;
-    }
-    img.ciao {
-      left: 530px;
-      top: 130px;
-      z-index: 2;
-      position: absolute;
-    }
-    img.blomst {
-      top: 555px;
-      left: 120px;
-      max-width: 150px;
-      z-index: 2;
-      position: absolute;
-    }
-    p {
-      grid-column: 2;
-      position: static;
-    }
-  }
-</style>
+<style></style>
