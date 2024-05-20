@@ -22,16 +22,16 @@ import Button from "../components/Button.astro";
     <main>
       <div>
         <h1>Bake and Bake</h1>
+        <img class="bike" src="/public/img/pizzabike.webp" alt="bike" />
         <h2>Book din personlige pizzabager</h2>
         <p>
           Bike and bake kommer hjem til dig og giver dig en autentisk pizza
           oplevelse. Vi kan bookes til små og store arrangementer - og tilpasser
           os til dit behov og dit hjem.
         </p>
-        <img src="/public/img/pizzabike.webp" alt="bike" />
       </div>
-      <div>
-        <img src="/public/img/index1.webp" alt="" />
+      <div class="grid-3">
+        <img class="pizza1" src="/public/img/index1.webp" alt="" />
         <img src="/public/img/index2.webp" alt="" />
         <img src="/public/img/index3.webp" alt="" />
       </div>
@@ -102,4 +102,15 @@ import Button from "../components/Button.astro";
   <Footer />
 </html>
 
-<style></style>
+<style>
+  .pizza1 {
+    min-width: 2250px;
+    max-width: 2250px;
+  }
+  .bike {
+    max-width: 80%;
+  }
+  .grid-3 img {
+    max-width: 40%;
+  }
+</style>
