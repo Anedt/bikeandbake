@@ -54,8 +54,8 @@ import Button from "../components/Button.astro";
       <div>
         <img class="knallert" src="/public/img/knaller.webp" alt="" />
         <Booking />
-        <img class="pizza3" src="/public/img/pizza3.web" alt="" />
-        <img class="pizza1" src="/public/img/pizza3" alt="" />
+        <img class="pizza3" src="/public/img/pizza3.webp" alt="" />
+        <img class="pizza1" src="/public/img/pizza3.webp" alt="" />
         <img class="ciao" src="/public/img/bestik.webp" alt="" />
       </div>
       <div>
@@ -81,20 +81,18 @@ import Button from "../components/Button.astro";
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum
         </p>
-        <h2>Vi tilbyder nu madlavningskurser</h2>
+        <h3>Vi tilbyder nu madlavningskurser</h3>
         <Button>Læs om tilbudet</Button>
       </div>
-      <div>
+      <div class="grid-11">
         <img src="/public/img/pizza3.webp" alt="" />
         <img src="/public/img/pasta.webp" alt="" />
         <img src="/public/img/slice.webp" alt="" />
         <img src="/public/img/antipasti.webp" alt="" />
-        <img src="/public/img/is.webp" alt="" />
-        <img src="/public/img/pizza2.web" alt="" />
+        <img src="/public/img/pizza2.webp" alt="" />
         <img src="/public/img/pasta.webp" alt="" />
         <img src="/public/img/slice.webp" alt="" />
         <img src="/public/img/antipasti.webp" alt="" />
-        <img src="/public/img/is.webp" alt="" />
         <img src="/public/img/pizza2.webp" alt="" />
       </div>
     </main>
@@ -103,10 +101,23 @@ import Button from "../components/Button.astro";
 </html>
 
 <style>
+  .grid-11 {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+    box-shadow: inset 0 -2px 0 #cd3a25;
+    color: #cd3a25;
+  }
+  .grid-11 img {
+    width: 100%;
+  }
   .bike {
     max-width: 80%;
   }
   .grid-3 img {
     max-width: 40%;
+  }
+  img {
+    max-width: 80%;
   }
 </style>
