@@ -19,77 +19,22 @@ import Navigation from "../components/Navigation.astro";
   <body>
     <Navigation />
     <main>
-      <img class="ciao" src="/public/img/ciao.webp" alt="" />
-      <Booking class="Booking" />
-      <img class="blomst" src="/public/img/blomst-2.webp" alt="" />
-      <p>
-        Send en forspørgsel ved at udfylde formularen. Du bliver herefter
-        kontaktet af os og derfra vil vi i fællesskab planlægge detaljerne
-        omkring bookingen. <p>
-          Hvis du er nysgerrig på at vide mere? så tag kontakt og få en
-          uforpligtende samtale
-        </p>
+      <div>
+        <h1>Bake and Bake</h1>
+        <h2>Book din personlige pizzabager</h2>
         <p>
-          Vi forbeholder os retten til ikke at acceptere en forspørgsel, hvis vi
-          ikke har tid eller kapacitet på den valgte dato.
+          Bike and bake kommer hjem til dig og giver dig en autentisk pizza
+          oplevelse. Vi kan bookes til små og store arrangementer - og tilpasser
+          os til dit behov og dit hjem.
         </p>
-      </p>
+      </div>
+      <img class="ciao" src="/public/img/" alt="" />
     </main>
-    <Footer/>
+    <Footer />
   </body>
 </html>
 
 <style>
-  img.ciao {
-    left: 300px;
-    top: 130px;
-    z-index: 2;
-    position: absolute;
-  }
-  img.blomst {
-    max-width: 150px;
-    z-index: 2;
-    position: absolute;
-    top: 555px;
-    left: -50px;
-  }
-  .Booking {
-    z-index: 1;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  main {
-    height: 100vh;
-    padding: 0 55px;
-    box-sizing: border-box;
-    margin-top: 100px;
-  }
-
   /* web */
-  @media screen and (min-width: 768px) {
-    main {
-      padding: 0 280px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 50px;
-    }
-    img.ciao {
-      left: 530px;
-      top: 130px;
-      z-index: 2;
-      position: absolute;
-    }
-    img.blomst {
-      top: 555px;
-      left: 120px;
-      max-width: 150px;
-      z-index: 2;
-      position: absolute;
-    }
-    p {
-      grid-column: 2;
-      position: static;
-    }
-  }
+  @media screen and (min-width: 768px);
 </style>
