@@ -84,7 +84,9 @@ import Button from "../components/Button.astro";
           laborum
         </p>
         <h3>Vi tilbyder nu madlavningskurser</h3>
-        <Button id="knap"><h2>Læs om tilbudet</h2></Button>
+        <div class="knap2" href="/src/pages/kurs.astro">
+          <Button variant="primary" size="medium">Læs om tilbudet</Button>
+        </div>
       </div>
     </main>
   </body>
@@ -168,6 +170,11 @@ import Button from "../components/Button.astro";
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 30px;
+  }
+  .knap2 {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: fit-content;
   }
   @media screen and (max-width: 768px) {
     .pizza1 {
