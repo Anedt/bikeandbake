@@ -91,6 +91,9 @@ footer {
   margin-top: 150px;
 }
 
+main {
+  margin: 60px;
+}
 @media screen and (min-width: 768px) {
   html {
     --primary-font-size: 64px;
@@ -102,5 +105,9 @@ footer {
     --quaternary-font-size: 20px;
     /*p*/
     /*boks.button*/
+  }
+
+  main {
+    margin: 100px;
   }
 }
