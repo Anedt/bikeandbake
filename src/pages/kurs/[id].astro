@@ -1,11 +1,11 @@
 ---
 import MainLayout from "../../MainLayout.astro";
 
-// "https://fisxfvyrriqnsrbvxcmu.supabase.co"
+// "https://fisxfvyrriqnsrbvxcmu.supabase.co/rest/v1/kursurs"
 
 export async function getStaticPaths () { 
     const data = await fetch(
-    "https://fisxfvyrriqnsrbvxcmu.supabase.co/rest/v1/kursurs",
+    "https://fisxfvyrriqnsrbvxcmu.supabase.co",
 {
     method: "GET",
     headers: {
