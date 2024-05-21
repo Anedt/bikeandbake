@@ -60,8 +60,7 @@ h3 {
   font-weight: var(--secondary-font-weight);
 }
 
-h4,
-slot {
+h4{
   font-family: var(--primary-font);
   color: var(--tertiary);
   font-size: var(--quaternary-font-size);
@@ -83,6 +82,12 @@ li {
   font-weight: var(--primary-font-weight);
   list-style: none;
   text-decoration: none;
+}
+Button {
+  font-family: var(--primary-font);
+  color: var(--tertiary);
+  font-size: var(--quaternary-font-size);
+  font-weight: var(--secondary-font-weight);
 }
 
 footer {
