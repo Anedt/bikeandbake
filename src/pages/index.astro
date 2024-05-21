@@ -39,8 +39,8 @@ import Button from "../components/Button.astro";
         <img src="/public/img/index4.webp" alt="" />
       </div>
       <div>
-        <img class="blade" src="/public/img/blade.webp" alt="" />
-        <img class="blade" src="/public/img/blade.webp" alt="" />
+        <img class="blade2" src="/public/img/blade.webp" alt="" />
+        <img class="blade1" src="/public/img/blade.webp" alt="" />
         <h3>Om os</h3>
         <p>
           Bike and Bake, er et catering firma, som startede med ideen om at
@@ -85,19 +85,19 @@ import Button from "../components/Button.astro";
         <h3>Vi tilbyder nu madlavningskurser</h3>
         <Button>Læs om tilbudet</Button>
       </div>
-      <div class="grid-11">
-        <img src="/public/img/pizza3.webp" alt="" />
-        <img src="/public/img/pasta.webp" alt="" />
-        <img src="/public/img/slice.webp" alt="" />
-        <img src="/public/img/antipasti.webp" alt="" />
-        <img src="/public/img/pizza2.webp" alt="" />
-        <img src="/public/img/pasta.webp" alt="" />
-        <img src="/public/img/slice.webp" alt="" />
-        <img src="/public/img/antipasti.webp" alt="" />
-        <img src="/public/img/pizza2.webp" alt="" />
-      </div>
     </main>
   </body>
+  <div class="grid-11">
+    <img src="/public/img/pizza3.webp" alt="" />
+    <img src="/public/img/pasta.webp" alt="" />
+    <img src="/public/img/slice.webp" alt="" />
+    <img src="/public/img/antipasti.webp" alt="" />
+    <img src="/public/img/pizza2.webp" alt="" />
+    <img src="/public/img/pasta.webp" alt="" />
+    <img src="/public/img/slice.webp" alt="" />
+    <img src="/public/img/antipasti.webp" alt="" />
+    <img src="/public/img/pizza2.webp" alt="" />
+  </div>
   <Footer />
 </html>
 
@@ -121,8 +121,15 @@ import Button from "../components/Button.astro";
   img {
     max-width: 80%;
   }
-  .blade img {
-    max-width: 40%;
+  .blade1 {
+    max-width: 30%;
+  }
+  .blade2 {
+    max-width: 30%;
+    transform: rotate(180deg);
+  }
+  main {
+    margin: 40px;
   }
 
   @media screen and (max-width: 768px) {
