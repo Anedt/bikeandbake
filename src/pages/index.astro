@@ -22,21 +22,21 @@ import Button from "../components/Button.astro";
     <main class="container">
       <div>
         <h1>Bake and Bake</h1>
-        <img class="bike" src="/public/img/pizzabike.webp" alt="bike" />
         <h2>Book din personlige pizzabager</h2>
         <p>
           Bike and bake kommer hjem til dig og giver dig en autentisk pizza
           oplevelse. Vi kan bookes til små og store arrangementer - og tilpasser
           os til dit behov og dit hjem.
         </p>
+        <img class="bike" src="/public/img/pizzabike.webp" alt="bike" />
       </div>
       <div class="grid-3">
         <img class="pizza1" src="/public/img/index1.webp" alt="" />
         <img class="b1" src="/public/img/index2.webp" alt="" />
-        <img class="b2" src="/public/img/index3.webp" alt="" />
+        <img class="b1" src="/public/img/index3.webp" alt="" />
       </div>
       <div>
-        <img src="/public/img/index4.webp" alt="" />
+        <img class="b1" src="/public/img/index4.webp" alt="" />
       </div>
       <div>
         <img class="blade2" src="/public/img/blade.webp" alt="" />
@@ -53,11 +53,12 @@ import Button from "../components/Button.astro";
         </p>
       </div>
       <div>
-        <img class="knallert" src="/public/img/knaller.webp" alt="" />
-        <Booking />
+        <img class="knallert" src="/public/img/knallert.webp" alt="" />
+
         <img class="pizza3" src="/public/img/pizza3.webp" alt="" />
         <img class="pizza1" src="/public/img/pizza1.webp" alt="" />
         <img class="bestik" src="/public/img/bestik.webp" alt="" />
+        <Booking />
       </div>
       <div>
         <img src="/public/img/index3.webp" alt="" />
@@ -102,6 +103,9 @@ import Button from "../components/Button.astro";
 </html>
 
 <style>
+  .form-felt2 {
+    z-index: 1;
+  }
   .grid-11 {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -131,21 +135,35 @@ import Button from "../components/Button.astro";
   main {
     padding:;
   }
-  .pizza3 {
-    max-width: 40%;
-  }
   .pizza1 {
+    z-index: 2;
+  }
+  .pizza3 {
+    z-index: 2;
     max-width: 40%;
   }
   .bestik {
-    max-width: 40%;
-    min-width: 40%;
+    max-width: 20%;
   }
   #knap {
     text-align: center;
   }
+  .grid-2 {
+  }
+  .pizza1 img {
+    border: 5px #cd3a25;
+  }
+  .b1 img {
+    border-bottom: 5px #cd3a25;
+  }
+  img {
+    align-items: center;
+  }
   @media screen and (max-width: 768px) {
     .pizza1 {
+      display: none;
+    }
+    .bike {
       display: none;
     }
   }
