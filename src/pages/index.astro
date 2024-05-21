@@ -40,11 +40,12 @@ import Button from "../components/Button.astro";
       </div>
       <div>
         <img class="blade" src="/public/img/blade.webp" alt="" />
+        <img class="blade" src="/public/img/blade.webp" alt="" />
         <h3>Om os</h3>
         <p>
           Bike and Bake, er et catering firma, som startede med ideen om at
-          kunne bringe den autentiske italienske pizza oplevelse rundt.  Vi er
-          et catering firma som kommer ud til både private arrangementer og til
+          kunne bringe den autentiske italienske pizza oplevelse rundt.Vi er et
+          catering firma som kommer ud til både private arrangementer og til
           firmaaarngementer. Vi tilbyder italiensk mad, såsom antipasti, salat,
           pizza og dessert. Vi bringer ikke den færdige mad, men vi laver den
           foran vores gæster. Derudover kan man også opleve os på markeder og
@@ -56,7 +57,7 @@ import Button from "../components/Button.astro";
         <Booking />
         <img class="pizza3" src="/public/img/pizza3.webp" alt="" />
         <img class="pizza1" src="/public/img/pizza3.webp" alt="" />
-        <img class="ciao" src="/public/img/bestik.webp" alt="" />
+        <img class="bestik" src="/public/img/bestik.webp" alt="" />
       </div>
       <div>
         <img src="/public/img/index3.webp" alt="" />
@@ -64,7 +65,7 @@ import Button from "../components/Button.astro";
         <img src="/public/img/index1.webp" alt="" />
       </div>
       <div>
-        <img class="ciao" src="/public/img/ovn.webp" alt="" />
+        <img class="pizzaovn" src="/public/img/ovn.webp" alt="pizzaovn" />
         <p>
           Vil du gerne udvide din viden indenfor det italienske køkken, eller
           lære hvordan man laver den bedste pizzadej? Så kan du nu booke et
@@ -120,9 +121,12 @@ import Button from "../components/Button.astro";
   img {
     max-width: 80%;
   }
+  .blade img {
+    max-width: 40%;
+  }
 
   @media screen and (max-width: 768px) {
-    .bike img {
+    .pizza1 {
       display: none;
     }
   }
