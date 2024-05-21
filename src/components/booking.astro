@@ -6,32 +6,32 @@ import Button from "../components/Button.astro";
   <div class="form-felt">
     <h2>Book catering</h2>
     <label>
-      Fulde navn
+      <p>Fulde navn</p>
       <input type="text" name="navn" required />
     </label>
     <label>
-      <span>Email</span>
+      <span><p>Email</p></span>
       <input type="email" name="email" required />
     </label>
     <label>
-      <span>Antal pers.</span>
+      <span><p>Antal pers.</p></span>
       <input type="number" name="email" required />
     </label>
     <label>
-      <span>Dato</span>
+      <span><p>Dato</p></span>
       <input type="date" name="navn" required />
     </label>
     <label>
-      <span>Lokation</span>
+      <span><p>Lokation</p></span>
       <input type="text" name="lokation" required />
     </label>
     <label>
-      <span>Ekstra info</span>
+      <span><p>Ekstra info</p></span>
       <textarea name="besked" rows"1"></textarea>
     </label>
-    <Button>
-      <span class="knap-tekst">Indsend</span>
-    </Button>
+    <div class="knap1">
+      <Button variant="primary" size="small">Insend</Button>
+    </div>
   </div>
 </div>
 
@@ -39,7 +39,7 @@ import Button from "../components/Button.astro";
   .form-felt {
     border-radius: 15px;
     border: 2px solid #285632;
-    height: 650px;
+    height: 700px;
     width: 325px;
     padding: 10px;
     display: flex;
@@ -51,6 +51,10 @@ import Button from "../components/Button.astro";
   }
   h2 {
     text-align: center;
+  }
+  .knap1 {
+    align-items: center;
+    margin-bottom: 50px;
   }
 
   input {
