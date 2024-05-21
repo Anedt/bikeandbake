@@ -19,7 +19,7 @@ import Button from "../components/Button.astro";
   </head>
   <body>
     <Navigation />
-    <main>
+    <main class="container">
       <div>
         <h1>Bake and Bake</h1>
         <img class="bike" src="/public/img/pizzabike.webp" alt="bike" />
@@ -32,8 +32,8 @@ import Button from "../components/Button.astro";
       </div>
       <div class="grid-3">
         <img class="pizza1" src="/public/img/index1.webp" alt="" />
-        <img src="/public/img/index2.webp" alt="" />
-        <img src="/public/img/index3.webp" alt="" />
+        <img class="b1" src="/public/img/index2.webp" alt="" />
+        <img class="b2" src="/public/img/index3.webp" alt="" />
       </div>
       <div>
         <img src="/public/img/index4.webp" alt="" />
@@ -129,7 +129,7 @@ import Button from "../components/Button.astro";
     transform: rotate(180deg);
   }
   main {
-    margin: 40px;
+    padding:;
   }
 
   @media screen and (max-width: 768px) {

@@ -1,44 +1,92 @@
+---
+import "../styles/generel.css";
+import Navigation from "../components/Navigation.astro";
+---
 
+<Navigation />
 <h1>GALLERI</h1>
+<main>
+  <div class="grid_1-1">
+    <div class="image">
+      <img src="/public/img/topizzaer.webp" alt="to pizzaer" />
+    </div>
 
-<div class="grid_1-1">
-  <div>
-    <img src="" alt="" />
-  </div>
+    <div class="image">
+      <img src="/public/img/michele.webp" alt="to pizzaer" />
+    </div>
 
-  <div>
-    <img src="" alt="" />
-  </div>
+    <div class="image">
+      <img src="/public/img/pizzamel.webp" alt="to pizzaer" />
+    </div>
 
-  <div>
-    <img src="" alt="" />
-  </div>
+    <div class="image">
+      <img src="/public/img/topersoner.webp" alt="to pizzaer" />
+    </div>
 
-  <div>
-    <img src="" alt="" />
-  </div>
+    <div class="image">
+      <img src="/public/img/pizzalaver.webp" alt="to pizzaer" />
+    </div>
 
-  <div>
-    <img src="" alt="" />
-  </div>
+    <div class="image">
+      <img src="/public/img/trepizzaer.webp" alt="to pizzaer" />
+    </div>
 
-  <div>
-    <img src="" alt="" />
-  </div>
+    <div class="image">
+      <img src="/public/img/pizzaovn.webp" alt="to pizzaer" />
+    </div>
 
-  <div>
-    <img src="" alt="" />
+    <div class="image">
+        <img src="/public/img/cutter.webp" alt="to pizzaer" />
+      </div>
+
   </div>
-</div>
+</main>
 
 <style>
+
+h1 {
+    text-align: center;
+  }
+
+    img {
+        max-width: 75%;
+        padding-left: 50px;
+        padding-bottom: 10px;
+    }
+
+    image{
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    align-content: center;
+  }
+
+  @media screen and (min-width: 768px){
+
+    
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    row-gap: 10px;
   }
 
   h1 {
     text-align: center;
   }
+
+  img {
+    max-width: 80%;
+    height: auto;
+    padding: 20px;
+
+  }
+  image{
+    display: flex;
+    justify-content: center;
+  }
+}
 
 </style>
