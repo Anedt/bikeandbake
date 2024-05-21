@@ -1,10 +1,8 @@
 ---
-
+const { variant, size } = Astro.props;
 ---
 
-<button>
-  <slot>Fallback tekst</slot>
-</button>
+<button><slot /></button>
 
 <style>
   Button {
@@ -20,7 +18,4 @@
   Button:hover {
     border: 2px solid #5b8b66;
   }
-
-  
-
 </style>
