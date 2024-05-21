@@ -60,7 +60,7 @@ import Button from "../components/Button.astro";
         <img class="bestik" src="/public/img/bestik.webp" alt="" />
         <Booking />
       </div>
-      <div>
+      <div class="grid_1-1-1">
         <img src="/public/img/index3.webp" alt="" />
         <img src="/public/img/index6.webp" alt="" />
         <img src="/public/img/index1.webp" alt="" />
@@ -119,11 +119,23 @@ import Button from "../components/Button.astro";
   .bike {
     max-width: 80%;
   }
+
+  .grid-3 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 30px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+  }
   .grid-3 img {
-    max-width: 40%;
+    max-width: 100%;
+	
   }
   img {
     max-width: 80%;
+	align-items: center;
+	margin-left:30px;
   }
   .blade1 {
     max-width: 30%;
@@ -132,9 +144,7 @@ import Button from "../components/Button.astro";
     max-width: 30%;
     transform: rotate(180deg);
   }
-  main {
-    padding:;
-  }
+
   .pizza1 {
     z-index: 2;
   }
@@ -148,16 +158,17 @@ import Button from "../components/Button.astro";
   #knap {
     text-align: center;
   }
-  .grid-2 {
-  }
+
   .pizza1 img {
     border: 5px #cd3a25;
   }
   .b1 img {
     border-bottom: 5px #cd3a25;
   }
-  img {
-    align-items: center;
+  .grid_1-1-1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-top: 30px;
   }
   @media screen and (max-width: 768px) {
     .pizza1 {
@@ -167,4 +178,6 @@ import Button from "../components/Button.astro";
       display: none;
     }
   }
+
+  
 </style>
