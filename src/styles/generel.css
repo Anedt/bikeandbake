@@ -20,13 +20,13 @@ html {
 
   --primary-list-style: none;
 
-  --primary-font-size: 64px;
+  --primary-font-size: 38px;
   /*h1*/
-  --secondary-font-size: 40px;
+  --secondary-font-size: 25px;
   /*h2*/
-  --tertiary-font-size: 37px;
+  --tertiary-font-size: 25px;
   /*h3*/
-  --quaternary-font-size: 20px;
+  --quaternary-font-size: 18px;
   /*p*/
   /*boks.button*/
 }
@@ -56,7 +56,7 @@ h2 {
 h3 {
   font-family: var(--primary-font);
   color: var(--quaternary);
-  font-size: var(--quaternary-font-size);
+  font-size: var(--tertiary-font-size);
   font-weight: var(--secondary-font-weight);
 }
 
@@ -89,4 +89,18 @@ footer {
   background-color: var(--secondary);
   padding: 50px;
   margin-top: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    --primary-font-size: 64px;
+    /*h1*/
+    --secondary-font-size: 40px;
+    /*h2*/
+    --tertiary-font-size: 37px;
+    /*h3*/
+    --quaternary-font-size: 20px;
+    /*p*/
+    /*boks.button*/
+  }
 }
