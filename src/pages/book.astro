@@ -25,33 +25,24 @@ import Footer from "../components/Footer.astro";
       <p>
         Send en forspørgsel ved at udfylde formularen. Du bliver herefter
         kontaktet af os og derfra vil vi i fællesskab planlægge detaljerne
-        omkring bookingen. <p>
-          Hvis du er nysgerrig på at vide mere? så tag kontakt og få en
-          uforpligtende samtale
-        </p>
-        <p>
-          Vi forbeholder os retten til ikke at acceptere en forspørgsel, hvis vi
-          ikke har tid eller kapacitet på den valgte dato.
-        </p>
+        omkring bookingen.<br /><br /> Hvis du er nysgerrig på at vide mere? så tag
+        kontakt og få en uforpligtende samtale.<br /><br /> Vi forbeholder os retten
+        til ikke at acceptere en forspørgsel, hvis vi ikke har tid eller kapacitet
+        på den valgte dato.
       </p>
     </main>
-    <Footer />
   </body>
+  <Footer />
 </html>
 
 <style>
-  img.ciao {
-    left: 300px;
-    top: 130px;
-    z-index: 2;
-    position: absolute;
-  }
-  img.blomst {
-    max-width: 150px;
-    z-index: 2;
-    position: absolute;
-    top: 555px;
-    left: -50px;
+  @media screen and (max-width: 768px) {
+    .blomst {
+      display: none;
+    }
+    .ciao {
+      display: none;
+    }
   }
   .Booking {
     z-index: 1;
@@ -59,29 +50,22 @@ import Footer from "../components/Footer.astro";
     width: 100%;
   }
 
-  main {
-    height: 100vh;
-    box-sizing: border-box;
-    margin-top: 100px;
-  }
-
   /* web */
   @media screen and (min-width: 768px) {
     main {
-      padding: 0 280px;
+      padding: 0 100px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
       grid-column-gap: 50px;
     }
     img.ciao {
-      left: 530px;
-      top: 130px;
+      left: 510px;
+      top: 140px;
       z-index: 2;
       position: absolute;
     }
     img.blomst {
-      top: 555px;
-      left: 120px;
+      top: 605px;
+      left: 40px;
       max-width: 150px;
       z-index: 2;
       position: absolute;
