@@ -1,10 +1,12 @@
 ---
 import "../styles/generel.css";
 import MainLayout from "../MainLayout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <MainLayout>
-<h1>GALLERI</h1>
+  <h1>GALLERI</h1>
   <div class="grid_1-1">
     <div class="image">
       <img src="/public/img/topizzaer.webp" alt="to pizzaer" />
@@ -35,27 +37,24 @@ import MainLayout from "../MainLayout.astro";
     </div>
 
     <div class="image">
-        <img src="/public/img/cutter.webp" alt="to pizzaer" />
-      </div>
-
+      <img src="/public/img/cutter.webp" alt="to pizzaer" />
+    </div>
   </div>
-</main>
-
+  <Footer />
 </MainLayout>
 
 <style>
-
-h1 {
+  h1 {
     text-align: center;
   }
 
-    img {
-        max-width: 75%;
-        padding-left: 50px;
-        padding-bottom: 10px;
-    }
+  img {
+    max-width: 75%;
+    padding-left: 50px;
+    padding-bottom: 10px;
+  }
 
-    image{
+  image {
     display: flex;
     justify-content: center;
   }
@@ -64,30 +63,26 @@ h1 {
     align-content: center;
   }
 
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      row-gap: 10px;
+    }
 
-    
-  .grid_1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    row-gap: 10px;
+    h1 {
+      text-align: center;
+    }
+
+    img {
+      max-width: 80%;
+      height: auto;
+      padding: 20px;
+    }
+    image {
+      display: flex;
+      justify-content: center;
+    }
   }
-
-  h1 {
-    text-align: center;
-  }
-
-  img {
-    max-width: 80%;
-    height: auto;
-    padding: 20px;
-
-  }
-  image{
-    display: flex;
-    justify-content: center;
-  }
-}
-
 </style>
