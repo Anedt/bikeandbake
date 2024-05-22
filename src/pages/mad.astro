@@ -1,6 +1,7 @@
 ---
 import "../styles/generel.css";
 import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -20,8 +21,8 @@ import Navigation from "../components/Navigation.astro";
     <main>
       <h1>VORES MAD</h1>
       <div class="container">
-        <img src="/public/img/antipasti.webp" alt="Centered Image">
-    </div>
+        <img src="/public/img/antipasti.webp" alt="Centered Image" />
+      </div>
       <h3>Antipasto</h3>
       <p>
         Vi serverer en type antipasto som, er populær fra og aktuel i
@@ -31,9 +32,9 @@ import Navigation from "../components/Navigation.astro";
         deljlig, smagsfuld og forfriskende start på den italienke madrejsen.
       </p>
       <div class="container">
-        <img src="/public/img/pizza1.webp" alt="Centered Image">
-    </div>
-      
+        <img src="/public/img/pizza1.webp" alt="Centered Image" />
+      </div>
+
       <h3>Pizza</h3>
       <p>
         Vores pizza menu består af 6 forskellige pizzaer; 3 vegetariske og 3 med
@@ -42,8 +43,8 @@ import Navigation from "../components/Navigation.astro";
       </p>
 
       <div class="container">
-        <img src="/public/img/is.webp" alt="Centered Image">
-    </div>
+        <img src="/public/img/is.webp" alt="Centered Image" />
+      </div>
       <h3>Gelato</h3>
       <p>
         Vi har 4 forskellige slags gelato: mango og jordbær som sorbet, og vi
@@ -87,18 +88,16 @@ import Navigation from "../components/Navigation.astro";
       </p>
 
       <div class="container">
-        <img src="/public/img/pizza2.webp" alt="Centered Image">
-        <img src="/public/img/pizza3.webp" alt="Centered Image">
-
-    </div>
+        <img src="/public/img/pizza2.webp" alt="Centered Image" />
+        <img src="/public/img/pizza3.webp" alt="Centered Image" />
+      </div>
     </main>
-    <footer></footer>
+    <Footer />
   </body>
 </html>
 
 <style>
-
-h1 {
+  h1 {
     text-align: center;
   }
 
@@ -122,40 +121,36 @@ h1 {
   img {
     max-width: 20%;
     height: auto;
-}
-
-    @media screen and (min-width:768px) {
-        
-    
-  main {
-    margin: 350px;
   }
 
-  p {
-    margin-bottom: 50px;
+  @media screen and (min-width: 768px) {
+    main {
+      margin: 350px;
+    }
+
+    p {
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    img {
+      max-width: 20%;
+      height: auto;
+    }
   }
-
-  h1 {
-    text-align: center;
-  }
-
-  h3 {
-    text-align: center;
-  }
-
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-  }
-
-  img {
-    max-width: 20%;
-    height: auto;
-}
-
-}
-
 </style>
