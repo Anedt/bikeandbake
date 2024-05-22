@@ -20,21 +20,18 @@ import Button from "../components/Button.astro";
     <main class="container">
       <div>
         <h1>Bake and Bake</h1>
-        <img class="bike" src="/public/img/pizzabike.webp" alt="bike" />
         <h2>Book din personlige pizzabager</h2>
         <p>
           Bike and bake kommer hjem til dig og giver dig en autentisk pizza
           oplevelse. Vi kan bookes til små og store arrangementer - og tilpasser
           os til dit behov og dit hjem.
         </p>
+        <img class="bike" src="/public/img/pizzabike.webp" alt="bike" />
       </div>
       <div class="grid-3">
         <!-- <img class="pizza1" src="/public/img/index1.webp" alt="" /> -->
         <img class="b1" src="/public/img/index2.webp" alt="" />
         <img class="b1" src="/public/img/index3.webp" alt="" />
-      </div>
-      <div>
-        <img class="b2" src="/public/img/index4.webp" alt="" />
       </div>
       <div>
         <img class="blade2" src="/public/img/blade.webp" alt="" />
@@ -49,6 +46,9 @@ import Button from "../components/Button.astro";
           foran vores gæster. Derudover kan man også opleve os på markeder og
           festivaler
         </p>
+        <div>
+          <img class="b2" src="/public/img/index4.webp" alt="" />
+        </div>
       </div>
       <div>
         <img class="knallert" src="/public/img/knallert.webp" alt="" />
@@ -83,24 +83,26 @@ import Button from "../components/Button.astro";
         </p>
         <h3>Vi tilbyder nu madlavningskurser</h3>
         <div class="knap2">
-          <Button variant="primary" size="medium">Læs om tilbudet</Button>
+          <a href="/kursus">
+            <Button variant="primary" size="medium">Læs om tilbudet</Button>
+          </a>
         </div>
       </div>
     </main>
   </body>
-  <div class="grid-11">
-    <img src="/public/img/pizza3.webp" alt="" />
-    <img src="/public/img/pasta.webp" alt="" />
-    <img src="/public/img/slice.webp" alt="" />
-    <img src="/public/img/antipasti.webp" alt="" />
-    <img src="/public/img/pizza2.webp" alt="" />
-    <img src="/public/img/pasta.webp" alt="" />
-    <img src="/public/img/slice.webp" alt="" />
-    <img src="/public/img/antipasti.webp" alt="" />
-    <img src="/public/img/pizza2.webp" alt="" />
-  </div>
-  <Footer />
 </html>
+<div class="grid-11">
+  <img src="/public/img/pizza3.webp" alt="" />
+  <img src="/public/img/pasta.webp" alt="" />
+  <img src="/public/img/slice.webp" alt="" />
+  <img src="/public/img/antipasti.webp" alt="" />
+  <img src="/public/img/pizza2.webp" alt="" />
+  <img src="/public/img/pasta.webp" alt="" />
+  <img src="/public/img/slice.webp" alt="" />
+  <img src="/public/img/antipasti.webp" alt="" />
+  <img src="/public/img/pizza2.webp" alt="" />
+</div>
+<Footer />
 
 <style>
   .form-felt2 {
@@ -152,6 +154,7 @@ import Button from "../components/Button.astro";
   .pizza3 {
     z-index: 2;
     max-width: 40%;
+    margin-left: -20%;
   }
   .bestik {
     max-width: 20%;

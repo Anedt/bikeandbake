@@ -4,26 +4,26 @@
 
 <div class="header">
   <div class="flex">
-  <div class="logo">
-    <a href="index.astro">
-      <img src="/public/img/logo.webp" alt="logo" loading="lazy" />
-    </a>
-  </div>
+    <div class="logo">
+      <a href="/">
+        <img src="/public/img/logo.webp" alt="logo" loading="lazy" />
+      </a>
+    </div>
 
-  <nav>
-  <ul class="menu">
-    <li><a href="src/pages/book.astro">Book catering</a></li>
-    <li><a href="/src/pages/kursurs.astro">Madlavningskurser</a></li>
-    <li><a href="/src/pages/mad.astro">Vores mad</a></li>
-    <li><a href="/src/pages/galleri.astro">Galleri</a></li>
-  </ul>
-  <div class="burger">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
+    <nav>
+      <ul class="menu">
+        <li><a href="/book">Book catering</a></li>
+        <li><a href="/kursus">Madlavningskurser</a></li>
+        <li><a href="/mad">Vores mad</a></li>
+        <li><a href="/">Galleri</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
   </div>
-</nav>
-</div>
 </div>
 
 <style>
@@ -60,11 +60,11 @@
   .burger {
     display: none;
     width: 32px;
-    cursor: pointer; 
+    cursor: pointer;
   }
   .burger .line {
     width: 100%;
-    height:2px;
+    height: 2px;
     background-color: #285632;
     margin-top: 8px;
     transition: 0.3s linear;
@@ -112,7 +112,6 @@
       font-size: 20px;
     }
   }
-
 </style>
 
 <script>
@@ -122,10 +121,9 @@
     const menu = document.querySelector(".menu");
 
     burger.addEventListener("click", () => {
-        burger.classList.toggle("active");
-        nav.classList.toggle("active");
-        menu.classList.toggle("active");
+      burger.classList.toggle("active");
+      nav.classList.toggle("active");
+      menu.classList.toggle("active");
     });
-});
-
+  });
 </script>
