@@ -20,7 +20,7 @@ html {
 
   --primary-list-style: none;
 
-  --primary-font-size: 38px;
+  --primary-font-size: 30px;
   /*h1*/
   --secondary-font-size: 25px;
   /*h2*/
@@ -97,8 +97,9 @@ footer {
 }
 
 main {
-  margin: 60px;
+  margin: 15px;
 }
+
 @media screen and (min-width: 768px) {
   html {
     --primary-font-size: 64px;
