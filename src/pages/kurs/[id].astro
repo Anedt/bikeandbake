@@ -5,7 +5,7 @@ import MainLayout from "../../MainLayout.astro";
 
 export async function getStaticPaths () { 
     const data = await fetch(
-    "https://fisxfvyrriqnsrbvxcmu.supabase.co/rest/v1/kursurs",
+    "https://fisxfvyrriqnsrbvxcmu.supabase.co/rest/v1/kursurs/1",
 {
     method: "GET",
     headers: {
@@ -13,7 +13,10 @@ export async function getStaticPaths () {
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZpc3hmdnlycmlxbnNyYnZ4Y211Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU4NDg5MDgsImV4cCI6MjAzMTQyNDkwOH0.5lrBoPFJ4FjT9V9DBJyvo0pcABFHQsghMHx2TlHhV3o",
 },
 }
+ 
 ).then((res) => res.json());
+
+console.log(data);
 
 return data.map((kurs) => {
 return {
