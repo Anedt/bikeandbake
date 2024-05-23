@@ -4,19 +4,11 @@ import "../styles/generel.css";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
 import Button from "../components/Button.astro";
+import MainLayout from "../MainLayout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="https://use.typekit.net/xyy0qse.css" />
-    <link rel="stylesheet" href="src/styles/generel.css" />
-  </head>
+<MainLayout>
   <body>
-    <Navigation />
     <main class="container">
       <div>
         <h1>Bake and Bake</h1>
@@ -94,20 +86,18 @@ import Button from "../components/Button.astro";
       </div>
     </main>
   </body>
-</html>
-<div class="grid-11">
-  <img src="/public/img/pizza3.webp" alt="" />
-  <img src="/public/img/pasta.webp" alt="" />
-  <img src="/public/img/slice.webp" alt="" />
-  <img src="/public/img/antipasti.webp" alt="" />
-  <img src="/public/img/pizza2.webp" alt="" />
-  <img src="/public/img/pasta.webp" alt="" />
-  <img src="/public/img/slice.webp" alt="" />
-  <img src="/public/img/antipasti.webp" alt="" />
-  <img src="/public/img/pizza2.webp" alt="" />
-</div>
-<Footer />
-
+  <div class="grid-11">
+    <img src="/public/img/pizza3.webp" alt="" />
+    <img src="/public/img/pasta.webp" alt="" />
+    <img src="/public/img/slice.webp" alt="" />
+    <img src="/public/img/antipasti.webp" alt="" />
+    <img src="/public/img/pizza2.webp" alt="" />
+    <img src="/public/img/pasta.webp" alt="" />
+    <img src="/public/img/slice.webp" alt="" />
+    <img src="/public/img/antipasti.webp" alt="" />
+    <img src="/public/img/pizza2.webp" alt="" />
+  </div>
+</MainLayout>
 <style>
   .form-felt2 {
     z-index: 1;
