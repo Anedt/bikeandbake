@@ -5,7 +5,7 @@ import MainLayout from "../../MainLayout.astro";
 
 export async function getStaticPaths () { 
     const data = await fetch(
-    "https://fisxfvyrriqnsrbvxcmu.supabase.co",
+    "https://fisxfvyrriqnsrbvxcmu.supabase.co/rest/v1/kursurs",
 {
     method: "GET",
     headers: {
