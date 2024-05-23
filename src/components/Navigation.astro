@@ -1,0 +1,129 @@
+---
+
+---
+
+<div class="header">
+  <div class="flex">
+    <div class="logo">
+      <a href="/">
+        <img src="/public/img/logo.webp" alt="logo" loading="lazy" />
+      </a>
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="/book">Book catering</a></li>
+        <li><a href="/kursus">Madlavningskurser</a></li>
+        <li><a href="/mad">Vores mad</a></li>
+        <li><a href="/galleri">Galleri</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<style>
+  img {
+    width: 100px;
+    z-index: 1;
+  }
+  a:hover {
+    box-shadow: inset 0 -2px 0 #5b8b66;
+    color: #5b8b66;
+    transition: color 0.3s ease;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 4em;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+  }
+  .header {
+    position: sticky;
+    background-color: rgba(243, 234, 224, 0.8);
+    top: 0;
+    z-index: 3;
+  }
+  .flex {
+    display: flex;
+  }
+
+  .burger {
+    display: none;
+    width: 32px;
+    cursor: pointer;
+  }
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: #285632;
+    margin-top: 8px;
+    transition: 0.3s linear;
+  }
+  @media screen and (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+    .burger {
+      display: block;
+      position: absolute;
+      right: 0;
+    }
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 7px);
+      transition: 0.2s linear;
+    }
+
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+      transition: 0.2s linear;
+    }
+
+    nav.active .menu {
+      display: block;
+      background-color: white;
+      position: absolute;
+      top: 45px;
+      width: 50%;
+      height: 500px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    nav.active .menu li {
+      margin: 10px 20px;
+    }
+
+    nav.active .menu a {
+      font-size: 20px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector("nav");
+    const menu = document.querySelector(".menu");
+
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      nav.classList.toggle("active");
+      menu.classList.toggle("active");
+    });
+  });
+</script>

@@ -1,0 +1,119 @@
+html {
+  --primary: black;
+  /*tekst*/
+  --secondary: #f3ece3;
+  /*html*/
+  --tertiary: #285632;
+  /*h1*/
+  --quaternary: #cd3a25;
+  /*h2*/
+  --quinary: #5b8b66;
+  /*hover*/
+
+  --primary-font: "vollkorn", serif;
+
+  --primary-line-height: 1.5;
+
+  --primary-font-weight: 400;
+
+  --secondary-font-weight: 600;
+
+  --primary-list-style: none;
+
+  --primary-font-size: 30px;
+  /*h1*/
+  --secondary-font-size: 25px;
+  /*h2*/
+  --tertiary-font-size: 25px;
+  /*h3*/
+  --quaternary-font-size: 18px;
+  /*p*/
+  /*boks.button*/
+}
+
+body {
+  background-color: var(--secondary);
+  font-family: var(--primary-font);
+  list-style: var(--primary-list-style);
+  line-height: var(--primary-line-height);
+}
+
+/* TEKST START*/
+h1 {
+  font-family: var(--primary-font);
+  color: var(--tertiary);
+  font-size: var(--primary-font-size);
+  font-weight: var(--secondary-font-weight);
+}
+
+h2 {
+  font-family: var(--primary-font);
+  color: var(--primary);
+  font-size: var(--secondary-font-size);
+  font-weight: var(--primary-font-weight);
+}
+
+h3 {
+  font-family: var(--primary-font);
+  color: var(--quaternary);
+  font-size: var(--tertiary-font-size);
+  font-weight: var(--secondary-font-weight);
+}
+
+h4 {
+  font-family: var(--primary-font);
+  color: var(--tertiary);
+  font-size: var(--quaternary-font-size);
+  font-weight: var(--secondary-font-weight);
+}
+
+p {
+  font-family: var(--primary-font);
+  color: var(--primary);
+  font-size: var(--quaternary-font-size);
+  line-height: var(--primary-line-height);
+  font-weight: var(--primary-font-weight);
+}
+a,
+li {
+  font-family: var(--primary-font);
+  color: var(--primary);
+  font-size: var(--quaternary-font-size);
+  font-weight: var(--primary-font-weight);
+  list-style: none;
+  text-decoration: none;
+}
+Button {
+  font-family: var(--primary-font);
+  color: var(--tertiary);
+  font-size: var(--quaternary-font-size);
+  font-weight: var(--secondary-font-weight);
+}
+
+footer {
+  background-color: var(--secondary);
+  padding: 50px;
+  margin-top: 150px;
+}
+
+main {
+  margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    --primary-font-size: 64px;
+    /*h1*/
+    --secondary-font-size: 40px;
+    /*h2*/
+    --tertiary-font-size: 37px;
+    /*h3*/
+    --quaternary-font-size: 20px;
+    /*p*/
+    /*boks.button*/
+  }
+
+  main {
+    margin: 100px;
+  }
+}

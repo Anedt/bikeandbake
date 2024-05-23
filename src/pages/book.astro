@@ -1,0 +1,65 @@
+---
+import "../styles/generel.css";
+import Booking from "../components/Booking.astro";
+import MainLayout from "../MainLayout.astro";
+---
+
+<MainLayout>
+  <body>
+    <main>
+      <img class="ciao" src="/public/img/ciao.webp" alt="" />
+      <Booking class="Booking" />
+      <img class="blomst" src="/public/img/blomst-2.webp" alt="" />
+      <p>
+        Send en forspørgsel ved at udfylde formularen. Du bliver herefter
+        kontaktet af os og derfra vil vi i fællesskab planlægge detaljerne
+        omkring bookingen.<br /><br /> Hvis du er nysgerrig på at vide mere? så tag
+        kontakt og få en uforpligtende samtale.<br /><br /> Vi forbeholder os retten
+        til ikke at acceptere en forspørgsel, hvis vi ikke har tid eller kapacitet
+        på den valgte dato.
+      </p>
+    </main>
+  </body>
+</MainLayout>
+
+<style>
+  @media screen and (max-width: 768px) {
+    .blomst {
+      display: none;
+    }
+    .ciao {
+      display: none;
+    }
+  }
+  .Booking {
+    z-index: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* web */
+  @media screen and (min-width: 768px) {
+    main {
+      padding: 0 150px;
+      display: grid;
+      grid-column-gap: 50px;
+    }
+    img.ciao {
+      left: 610px;
+      top: 140px;
+      z-index: 2;
+      position: absolute;
+    }
+    img.blomst {
+      top: 605px;
+      left: 100px;
+      max-width: 150px;
+      z-index: 2;
+      position: absolute;
+    }
+    p {
+      grid-column: 2;
+      position: static;
+    }
+  }
+</style>

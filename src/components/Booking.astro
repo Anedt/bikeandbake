@@ -1,0 +1,96 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<div class="form-felt2">
+  <div class="form-felt">
+    <h2>Book catering</h2>
+    <label>
+      <p>Fulde navn</p>
+      <input type="text" name="navn" required />
+    </label>
+    <label>
+      <span><p>Email</p></span>
+      <input type="email" name="email" required />
+    </label>
+    <label>
+      <span><p>Antal pers.</p></span>
+      <input type="number" name="email" required />
+    </label>
+    <label>
+      <span><p>Dato</p></span>
+      <input type="date" name="navn" required />
+    </label>
+    <label>
+      <span><p>Lokation</p></span>
+      <input type="text" name="lokation" required />
+    </label>
+    <label>
+      <span><p>Ekstra info</p></span>
+      <textarea name="besked" rows"1"></textarea>
+    </label>
+    <div class="knap1">
+      <Button variant="primary" size="small">Insend</Button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .form-felt {
+    border-radius: 15px;
+    border: 4px solid #285632;
+    height: 650px;
+    width: 400px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  h2 {
+    text-align: center;
+  }
+  .knap1 {
+    margin-bottom: 50px;
+  }
+
+  input {
+    display: block;
+    border: none;
+    border-bottom: 2px solid #285632;
+    background-color: transparent;
+    height: 30px;
+    margin: 10px 0;
+    padding: 5px;
+    flex: 1;
+  }
+  textarea {
+    border: 2px solid #285632;
+    background-color: transparent;
+    border-radius: 15px;
+    height: 50px;
+    max-height: 800px;
+    width: 250px;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  label > span {
+    flex: 1;
+    margin-right: 5px;
+  }
+  @media screen and (min-width: 768px) {
+    .knap1 {
+      margin-top: -8%;
+      margin-left: 10%;
+    }
+    .form-felt {
+      height: 700px;
+    }
+  }
+</style>

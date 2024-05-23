@@ -1,0 +1,85 @@
+---
+import "../styles/generel.css";
+import MainLayout from "../MainLayout.astro";
+---
+
+<MainLayout>
+  <h1>GALLERI</h1>
+  <div class="grid_1-1">
+    <div class="image">
+      <img src="/public/img/topizzaer.webp" alt="to pizzaer" />
+    </div>
+
+    <div class="image">
+      <img src="/public/img/foredrag.webp" alt="to pizzaer" />
+    </div>
+
+    <div class="image">
+      <img src="/public/img/børsen.webp" alt="to pizzaer" />
+    </div>
+
+    <div class="image">
+      <img src="/public/img/topersoner.webp" alt="to pizzaer" />
+    </div>
+
+    <div class="image">
+      <img src="/public/img/pizzalaver.webp" alt="to pizzaer" />
+    </div>
+
+    <div class="image">
+      <img src="/public/img/cykelkbh.webp" alt="to pizzaer" />
+    </div>
+
+    <div class="image">
+      <img src="/public/img/pizzaovn.webp" alt="to pizzaer" />
+    </div>
+
+    <div class="image">
+      <img src="/public/img/cutter.webp" alt="to pizzaer" />
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  h1 {
+    text-align: center;
+  }
+
+  img {
+    max-width: 75%;
+    padding-left: 50px;
+    padding-bottom: 10px;
+  }
+
+  image {
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    align-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      row-gap: 10px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    img {
+      max-width: 80%;
+      height: auto;
+      padding: 20px;
+    }
+    image {
+      display: flex;
+      justify-content: center;
+    }
+  }
+</style>
