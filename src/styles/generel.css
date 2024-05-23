@@ -96,9 +96,9 @@ footer {
   margin-top: 150px;
 }
 
-main {
+/* main {
   margin: 15px;
-}
+} */
 
 @media screen and (min-width: 768px) {
   html {
@@ -113,7 +113,7 @@ main {
     /*boks.button*/
   }
 
-  main {
+  /* main {
     margin: 100px;
-  }
+  } */
 }

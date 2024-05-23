@@ -41,39 +41,41 @@ import Footer from "../components/Footer.astro";
         kød. Menustilen er minimal, men med kvalitetsråvarer. Vores filosofi er
         at holde menuen enkel og velsmagende.
       </p>
-      <div class="piz">
-        <h4>
-          Margherita
-          <br /><br />
-          <br /><br />
-          Caprese
-          <br /><br />
-          <br /><br />
-          Potate e Olive
-          <br /><br />
-          <br /><br />
-          Diavola
-          <br /><br />
-          <br /><br />
-          Cotto
-          <br /><br />
-          <br /><br />
-          N`duja
-        </h4>
-        <p>
-          Tomat, bufalo mozzarella & basilikum
-          <br /><br />
-          Bufalo mozzarella, basilikum & cherry tomater
-          <br /><br />
-          Mozzarella, kartoffel, rosmarin, taggiasca & oliven
-          <br /><br />
-          Tomat, mozzarella & ventricina salami (semi spicy)
-          <br /><br />
-          Tomat, mozzarella & ventricina salami (semi spicy)
-          <br /><br />
-          Tomat, mozzarella & n'duja (spicy pork)
-        </p>
-      </div>
+      <section class="box">
+        <div class="piz">
+          <h4>
+            Margherita
+            <br /><br />
+            <br /><br />
+            Caprese
+            <br /><br />
+            <br /><br />
+            Potate e Olive
+            <br /><br />
+            <br /><br />
+            Diavola
+            <br /><br />
+            <br /><br />
+            Cotto
+            <br /><br />
+            <br /><br />
+            N`duja
+          </h4>
+          <p>
+            Tomat, bufalo mozzarella & basilikum
+            <br /><br />
+            Bufalo mozzarella, basilikum & cherry tomater
+            <br /><br />
+            Mozzarella, kartoffel, rosmarin, taggiasca & oliven
+            <br /><br />
+            Tomat, mozzarella & ventricina salami (semi spicy)
+            <br /><br />
+            Tomat, mozzarella & ventricina salami (semi spicy)
+            <br /><br />
+            Tomat, mozzarella & n'duja (spicy pork)
+          </p>
+        </div>
+      </section>
 
       <div class="container">
         <img src="/public/img/is.webp" alt="Centered Image" />
@@ -103,81 +105,91 @@ import Footer from "../components/Footer.astro";
         nyde maden, vi har derfor efter forespørgsel mulighed for at lave både
         glutenfri og vegansk base.
       </p>
-      <h3>Hvad du kan forvente når du bestiller hos os</h3>
-      <p>
-        Bike and Bake håber at kunne levere en oplevelse ud over det sædvanlige,
-        selvom vi bager pizzaer, som er en meget almindelig mad, vil vi gerne
-        have, at vores gæster mærker forskellen fra en take away stil og et
-        cateringpizzeria. Vi er glad for at kunne vise arbejdsflowet og
-        processen med at lave pizzaer, og vi vil have dem til at smage
-        pizzaioloens kunst (denne kunst er også anerkendt fra UNESCOs umærkelige
-        arv). Vi mener at kunder skal vælge os, da Bike and Bake vil gøre alt
-        for at give dem den unikke oplevelse, gæsterne kan få ved at se deres
-        pizzaer lavet for øjnene af dem. Vi ønsker, at kunderne husker
-        kvaliteten og den autentiske smag af italiensk pizza. Atmosfæren og de
-        stemninger, som Bike and Bake bringer med sig under et arrangement er
-        noget helt særligt. Bike and Bake handler IKKE kun om maden, det er en
-        måde at slappe af gæsterne på i en hyggelig og afslappet atmosfære.
-      </p>
+      <section class="box">
+        <h3>Hvad du kan forvente når du bestiller hos os</h3>
+        <p>
+          Bike and Bake håber at kunne levere en oplevelse ud over det
+          sædvanlige, selvom vi bager pizzaer, som er en meget almindelig mad,
+          vil vi gerne have, at vores gæster mærker forskellen fra en take away
+          stil og et cateringpizzeria. Vi er glad for at kunne vise
+          arbejdsflowet og processen med at lave pizzaer, og vi vil have dem til
+          at smage pizzaioloens kunst (denne kunst er også anerkendt fra UNESCOs
+          umærkelige arv). Vi mener at kunder skal vælge os, da Bike and Bake
+          vil gøre alt for at give dem den unikke oplevelse, gæsterne kan få ved
+          at se deres pizzaer lavet for øjnene af dem. Vi ønsker, at kunderne
+          husker kvaliteten og den autentiske smag af italiensk pizza.
+          Atmosfæren og de stemninger, som Bike and Bake bringer med sig under
+          et arrangement er noget helt særligt. Bike and Bake handler IKKE kun
+          om maden, det er en måde at slappe af gæsterne på i en hyggelig og
+          afslappet atmosfære.
+        </p>
 
-      <div class="container">
-        <img src="/public/img/pizza2.webp" alt="Centered Image" />
-        <img src="/public/img/pizza3.webp" alt="Centered Image" />
-      </div>
+        <div class="container">
+          <img src="/public/img/pizza2.webp" alt="Centered Image" />
+          <img src="/public/img/pizza3.webp" alt="Centered Image" />
+        </div>
+      </section>
     </main>
     <Footer />
   </body>
-</html>
 
-<style>
-  h1 {
-    text-align: center;
-  }
+  <style>
+    h1 {
+      text-align: center;
+    }
 
-  h3 {
-    text-align: center;
-  }
-
-  p {
-    margin-bottom: 30px;
-    margin-left: 10%;
-  }
-
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    gap: 20px;
-  }
-
-  img {
-    max-width: 20%;
-    height: auto;
-  }
-  .piz {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media screen and (min-width: 768px) {
-    main {
-      margin: 350px;
-      margin-top: -30px;
+    h3 {
+      text-align: center;
     }
 
     p {
-      margin-bottom: 90px;
+      margin-bottom: 30px;
+      margin-left: 10%;
     }
 
     .container {
-      gap: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      gap: 20px;
     }
 
     img {
       max-width: 20%;
       height: auto;
     }
-  }
-</style>
+    .piz {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      margin-left: 10%;
+      margin-top: 30px;
+    }
+    .box {
+      background-color: #f7f6f5;
+    }
+
+    @media screen and (min-width: 768px) {
+      main {
+        /* margin: 350px; */
+        margin-top: -30px;
+      }
+      p {
+        margin-bottom: 90px;
+      }
+
+      .container {
+        gap: 40px;
+      }
+
+      img {
+        max-width: 20%;
+        height: auto;
+      }
+    }
+  </style>
+</html>
