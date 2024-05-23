@@ -95,6 +95,9 @@ footer {
   padding: 50px;
   margin-top: 150px;
 }
+.box {
+  background-color: rgba(247, 246, 245, 0.7);
+}
 
 /* main {
   margin: 15px;
