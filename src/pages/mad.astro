@@ -27,9 +27,9 @@ import Footer from "../components/Footer.astro";
       <p>
         Vi serverer en type antipasto som, er populær fra og aktuel i
         ladsdistrikterne rundt omkring i Italien. Det er bruschetta, ristet brød
-        med friske tomatterninger og oregano, toppet med olivenolje.
-        Vi topper det med Parmigiano ost og nogle oliven. Forretten er en
-        deljlig, smagsfuld og forfriskende start på den italienke madrejsen.
+        med friske tomatterninger og oregano, toppet med olivenolje. Vi topper
+        det med Parmigiano ost og nogle oliven. Forretten er en deljlig,
+        smagsfuld og forfriskende start på den italienke madrejsen.
       </p>
       <div class="container">
         <img src="/public/img/pizza1.webp" alt="Centered Image" />
@@ -41,6 +41,39 @@ import Footer from "../components/Footer.astro";
         kød. Menustilen er minimal, men med kvalitetsråvarer. Vores filosofi er
         at holde menuen enkel og velsmagende.
       </p>
+      <div class="piz">
+        <h4>
+          Margherita
+          <br /><br />
+          <br /><br />
+          Caprese
+          <br /><br />
+          <br /><br />
+          Potate e Olive
+          <br /><br />
+          <br /><br />
+          Diavola
+          <br /><br />
+          <br /><br />
+          Cotto
+          <br /><br />
+          <br /><br />
+          N`duja
+        </h4>
+        <p>
+          Tomat, bufalo mozzarella & basilikum
+          <br /><br />
+          Bufalo mozzarella, basilikum & cherry tomater
+          <br /><br />
+          Mozzarella, kartoffel, rosmarin, taggiasca & oliven
+          <br /><br />
+          Tomat, mozzarella & ventricina salami (semi spicy)
+          <br /><br />
+          Tomat, mozzarella & ventricina salami (semi spicy)
+          <br /><br />
+          Tomat, mozzarella & n'duja (spicy pork)
+        </p>
+      </div>
 
       <div class="container">
         <img src="/public/img/is.webp" alt="Centered Image" />
@@ -122,6 +155,10 @@ import Footer from "../components/Footer.astro";
   img {
     max-width: 20%;
     height: auto;
+  }
+  .piz {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media screen and (min-width: 768px) {

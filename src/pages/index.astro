@@ -16,28 +16,22 @@ import MainLayout from "../MainLayout.astro";
           oplevelse. Vi kan bookes til små og store arrangementer - og tilpasser
           os til dit behov og dit hjem.
         </p>
-        <img class="bike" src="/public/img/pizzabike.webp" alt="bike" />
-      </div>
-      <div class="grid-3">
-        <!-- <img class="pizza1" src="/public/img/index1.webp" alt="" /> -->
-        <img class="b1" src="/public/img/index2.webp" alt="" />
-        <img class="b1" src="/public/img/index3.webp" alt="" />
-      </div>
-      <div>
-        <img class="blade2" src="/public/img/blade.webp" alt="" />
-        <img class="blade1" src="/public/img/blade.webp" alt="" />
-        <h3>Om os</h3>
-        <p>
-          Bike and Bake, er et catering firma, som startede med ideen om at
-          kunne bringe den autentiske italienske pizza oplevelse rundt.Vi er et
-          catering firma som kommer ud til både private arrangementer og til
-          firmaaarngementer. Vi tilbyder italiensk mad, såsom antipasti, salat,
-          pizza og dessert. Vi bringer ikke den færdige mad, men vi laver den
-          foran vores gæster. Derudover kan man også opleve os på markeder og
-          festivaler
-        </p>
+        <div class="grid_3">
+          <img src="/public/img/cykelkbh.webp" alt="bike" />
+        </div>
         <div>
-          <img class="b2" src="/public/img/index4.webp" alt="" />
+          <img class="blade2" src="/public/img/blade.webp" alt="" />
+          <img class="blade1" src="/public/img/blade.webp" alt="" />
+          <h3>Om os</h3>
+          <p>
+            Bike and Bake, er et catering firma, som startede med ideen om at
+            kunne bringe den autentiske italienske pizza oplevelse rundt.Vi er
+            et catering firma som kommer ud til både private arrangementer og
+            til firmaaarngementer. Vi tilbyder italiensk mad, såsom antipasti,
+            salat, pizza og dessert. Vi bringer ikke den færdige mad, men vi
+            laver den foran vores gæster. Derudover kan man også opleve os på
+            markeder og festivaler
+          </p>
         </div>
       </div>
       <div>
@@ -162,6 +156,15 @@ import MainLayout from "../MainLayout.astro";
     width: fit-content;
   }
   .b1 {
+  }
+
+  @media screen and (max-width: 768px) {
+    .grid_3{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    }
   }
   @media screen and (max-width: 768px) {
     .pizza1 {
