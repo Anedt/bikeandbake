@@ -95,10 +95,13 @@ footer {
   padding: 50px;
   margin-top: 150px;
 }
-
-main {
-  margin: 15px;
+.box {
+  background-color: rgba(247, 246, 245, 0.7);
 }
+
+/* main {
+  margin: 15px;
+} */
 
 @media screen and (min-width: 768px) {
   html {
@@ -113,7 +116,7 @@ main {
     /*boks.button*/
   }
 
-  main {
+  /* main {
     margin: 100px;
-  }
+  } */
 }
