@@ -8,6 +8,7 @@ import MainLayout from "../MainLayout.astro";
 <MainLayout>
   <body>
     <main class="container">
+<<<<<<< HEAD
       <div class="front">
         <div>
           <h1>Bake and Bake</h1>
@@ -18,6 +19,18 @@ import MainLayout from "../MainLayout.astro";
             tilpasser os til dit behov og dit hjem.
           </p>
         </div>
+=======
+      <section class="sektion">
+        <div class="front">
+          <div>
+        <h1>Bike and Bake</h1>
+        <h2>Book din personlige pizzabager</h2>
+        <p>
+          Bike and bake kommer hjem til dig og giver dig en autentisk pizza
+          oplevelse. Vi kan bookes til små og store arrangementer - og tilpasser
+          os til dit behov og dit hjem.
+        </p>
+>>>>>>> 99a4cf58970828f7ae3bdc69888ec6fb48b3f995
       </div>
       <div class="bike">
         <img src="/img/pizzabike.webp" alt="bike" />
@@ -29,6 +42,7 @@ import MainLayout from "../MainLayout.astro";
           <img class="blade1" src="/img/blade.webp" alt="" />
           <img src="/img/pizzabike.webp" alt="bike" />
         </div>
+<<<<<<< HEAD
       </div>
 
       <section class="box">
@@ -37,6 +51,47 @@ import MainLayout from "../MainLayout.astro";
           <div>
             <img class="blade2" src="/img/blade.webp" alt="" />
             <img class="blade1" src="/img/blade.webp" alt="" />
+=======
+      </section>
+
+        <section class="sektion">
+          <section class="box">
+            <div class="grid_1-1">
+              <img class="mc" src="/img/cykelkbh.webp" alt="bike" />
+              <div>
+                <img class="blade2" src="/img/blade.webp" alt="" />
+                <img class="blade1" src="/img/blade.webp" alt="" />
+                <h3>Om os</h3>
+                <p>
+                  Bike and Bake, er et catering firma, som startede med ideen om
+                  at kunne bringe den autentiske italienske pizza oplevelse
+                  rundt.Vi er et catering firma som kommer ud til både private
+                  arrangementer og til firmaaarngementer. Vi tilbyder italiensk
+                  mad, såsom antipasti, salat, pizza og dessert. Vi bringer ikke
+                  den færdige mad, men vi laver den foran vores gæster.
+                  Derudover kan man også opleve os på markeder og festivaler
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
+        <div>
+          <section class="sektion">
+            <img class="knallert" src="/img/knallert.webp" alt="" />
+
+          <img class="pizza3" src="/img/pizza3.webp" alt="" />
+          <img class="pizza1" src="/img/pizza1.webp" alt="" />
+          <img class="bestik" src="/img/bestik.webp" alt="" />
+          <Booking class="book" />
+        </section>
+      </div>
+      <section class="sektion">
+        <section class="box">
+          <div class="grid_1-1-1">
+            <img src="/img/index3.webp" alt="" />
+            <img src="/img/index6.webp" alt="" />
+            <img class="index1" src="/img/index1.webp" alt="" />
+>>>>>>> 99a4cf58970828f7ae3bdc69888ec6fb48b3f995
           </div>
           <h3>Om os</h3>
           <p>
@@ -93,6 +148,7 @@ import MainLayout from "../MainLayout.astro";
       </a>
     </div>
   </body>
+<<<<<<< HEAD
 </MainLayout>
 
 <div class="grid-11">
@@ -122,6 +178,47 @@ import MainLayout from "../MainLayout.astro";
   .bike {
     max-width: 80%;
   }
+=======
+  <style>
+    .form-felt2 {
+      z-index: 1;
+    }
+    .grid-11 {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: 10px;
+    }
+    .grid-11 img {
+      width: 100%;
+    }
+    .bike {
+      max-width: 60%;
+    }
+
+      .grid_1-1 img {
+        max-width: 100%;
+      }
+
+      
+      img {
+        max-width: 80%;
+        align-items: center;
+      }
+      .blade1 {
+        position: relative;
+        max-width: auto;
+        max-height: 6%;
+        z-index: 1;
+        transform: rotate(180deg);
+        margin-top: 2%;
+      }
+      .blade2 {
+        max-width: auto;
+        max-height:8%;
+        margin-left: 55%;
+        z-index: 2;
+      }
+>>>>>>> 99a4cf58970828f7ae3bdc69888ec6fb48b3f995
 
   .grid-3 img {
     max-width: 100%;
@@ -163,6 +260,7 @@ import MainLayout from "../MainLayout.astro";
     max-width: 100%;
   }
 
+<<<<<<< HEAD
   .knap2 {
     margin: 0 auto;
     margin-top: 100px;
@@ -176,6 +274,53 @@ import MainLayout from "../MainLayout.astro";
   @media screen and (max-width: 768px) {
     .bike {
       display: none;
+=======
+      @media screen and (max-width: 768px) {
+        .bike {
+          display: none;
+        }
+        .knallert {
+          display: none;
+        }
+        .mc {
+          display: none;
+        }
+        .pizza1 {
+          display: none;
+        }
+        .index1 {
+          display: none;
+        }
+
+      }
+
+    @media screen and (min-width: 768px) {
+      .bike {
+  
+      }
+      .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 130px;
+        margin: 60px;
+       
+      }
+
+      .grid_1-1 img {
+        margin-top: 20%;
+      }
+
+      .grid_1-1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+        margin: 10px;
+      }
+.index1 {
+  max-height: 84%;
+  width: 100%;
+}
+>>>>>>> 99a4cf58970828f7ae3bdc69888ec6fb48b3f995
     }
     .knallert {
       display: none;
