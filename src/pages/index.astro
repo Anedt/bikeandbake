@@ -17,7 +17,9 @@ import MainLayout from "../MainLayout.astro";
           os til dit behov og dit hjem.
         </p>
         <div>
+          <div class="bike">
           <img src="/public/img/pizzabike.webp" alt="bike" />
+        </div>
         </div>
         <section class="box">
           <div class="grid_3">
@@ -166,6 +168,13 @@ import MainLayout from "../MainLayout.astro";
       }
       .mc {
         display: none;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .bike {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
       }
     }
   </style>
