@@ -21,7 +21,7 @@ console.log(data);
 
 return data.map((kurs) => {
 return {
-  params: { id: kurs.id },
+  params: { slug: kurs.slug },
  props: { myData: kurs },
 
  };
@@ -33,16 +33,22 @@ return {
 ---
 
 <MainLayout title={myData.Tittel}>
-
+<main>
 <h1>{myData.Tittel}</h1>
 <div class="grid_1-1">
     <div>
     <img src={myData.img} alt="kurs">
 </div>
-<div>
+<div class="grid_1-1-1">
+    <div>
     <h3>Dato:</h3> <p>{myData.Date}</p>
+</div>
+<div>
 <h3>Sted:</h3> <p>{myData.Place}</p>
+</div>
+<div>
    <h3>Antal Pladser:</h3> <p>{myData.Spots}</p>
+</div>
 </div>
 <div>
     <h3>Hvad går kurset ud på?</h3>
@@ -52,16 +58,39 @@ return {
     <img src={myData.illustrasjon} alt="illustrasjon">
 </div>
 </div>
-
+</main>
 </MainLayout>
 
 <style>
+
+main {
+    margin: 40px;
+    margin-bottom: 60px;
+}
+
+
+@media screen and (max-width: 768px) {
+.grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+}
+
+@media screen and (min-width: 768px) {
     .grid_1-1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        gap: 40px;
     }
     img {
         width: 100%;
     }
+
+    main {
+        margin: 100px;
+        margin-bottom: 60px;
+    }
+}
+
 </style>
