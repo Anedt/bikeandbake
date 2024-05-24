@@ -6,28 +6,33 @@ import Button from "../components/Button.astro";
   <div class="form-felt2">
     <div class="form-felt">
       <h2>Book catering</h2>
-      <label>
-        <p>Fulde navn</p>
-        <input type="text" name="navn" required />
-      </label>
-      <label>
-        <span><p>Email</p></span>
-        <input type="email" name="email" required />
-      </label>
-      <label>
-        <span><p>Antal pers.</p></span>
-        <input type="number" name="email" required />
-      </label>
-      <label>
-        <span><p>Dato</p></span>
-        <input type="date" name="navn" required />
-      </label>
-      <label>
-        <span><p>Lokation</p></span>
-        <input type="text" name="lokation" required />
-      </label>
-      <div class="knap1">
-        <Button variant="primary" size="small">Insend</Button>
+      <div class="grid_5">
+        <label>
+          <p>Fulde navn</p>
+          <input type="text" name="navn" required />
+        </label>
+        <label>
+          <span><p>Email</p></span>
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          <span><p>Dato</p></span>
+          <input type="date" name="navn" required />
+        </label>
+      </div>
+      <div class="grid_5">
+        <label>
+          <span><p>Antal pers.</p></span>
+          <input type="number" name="email" required />
+        </label>
+        <label>
+          <span><p>Lokation</p></span>
+          <input type="text" name="lokation" required />
+        </label>
+
+        <div class="knap1">
+          <Button variant="primary" size="small">Insend</Button>
+        </div>
       </div>
     </div>
   </div>
@@ -48,6 +53,7 @@ import Button from "../components/Button.astro";
   }
   h2 {
     text-align: center;
+    color: #285632;
   }
   .knap1 {
     margin-bottom: 50px;
@@ -55,8 +61,8 @@ import Button from "../components/Button.astro";
 
   input {
     display: block;
-    border: none;
-    border-bottom: 2px solid #285632;
+    border-radius: 10px;
+    border: 2px solid white;
     background-color: transparent;
     height: 30px;
     margin: 10px 0;
@@ -81,6 +87,10 @@ import Button from "../components/Button.astro";
   label > span {
     flex: 1;
     margin-right: 5px;
+  }
+  .grid_5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   @media screen and (min-width: 768px) {
     .knap1 {
