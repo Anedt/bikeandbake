@@ -92,8 +92,6 @@ Button {
 
 footer {
   background-color: var(--secondary);
-  padding: 50px;
-  margin-top: 150px;
 }
 .box {
   background-color: rgba(247, 246, 245, 0.7);
