@@ -103,7 +103,7 @@ footer {
 
 @media screen and (min-width: 768px) {
   html {
-    --primary-font-size: 64px;
+    --primary-font-size: 45px;
     /*h1*/
     --secondary-font-size: 40px;
     /*h2*/
