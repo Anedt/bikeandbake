@@ -8,7 +8,7 @@ import MainLayout from "../MainLayout.astro";
 <MainLayout>
   <body>
     <main class="container">
-      <div>
+      <section class="sektion">
         <h1>Bake and Bake</h1>
         <h2>Book din personlige pizzabager</h2>
         <p>
@@ -19,6 +19,8 @@ import MainLayout from "../MainLayout.astro";
         <div>
           <img src="/public/img/pizzabike.webp" alt="bike" />
         </div>
+      </section>
+      <section class="sektion">
         <section class="box">
           <div class="grid_3">
             <img class="mc" src="/public/img/cykelkbh.webp" alt="bike" />
@@ -39,14 +41,18 @@ import MainLayout from "../MainLayout.astro";
             </div>
           </div>
         </section>
-        <div>
+      </section>
+      <div>
+        <section class="sektion">
           <img class="knallert" src="/public/img/knallert.webp" alt="" />
 
           <img class="pizza3" src="/public/img/pizza3.webp" alt="" />
           <img class="pizza1" src="/public/img/pizza1.webp" alt="" />
           <img class="bestik" src="/public/img/bestik.webp" alt="" />
           <Booking class="book" />
-        </div>
+        </section>
+      </div>
+      <section class="sektion">
         <section class="box">
           <div class="grid_1-1-1">
             <img src="/public/img/index3.webp" alt="" />
@@ -54,6 +60,8 @@ import MainLayout from "../MainLayout.astro";
             <img src="/public/img/index1.webp" alt="" />
           </div>
         </section>
+      </section>
+      <section class="sektion">
         <img class="pizzaovn" src="/public/img/ovn.webp" alt="pizzaovn" />
         <p>
           Vil du gerne udvide din viden indenfor det italienske køkken, eller
@@ -81,8 +89,9 @@ import MainLayout from "../MainLayout.astro";
             <Button variant="primary" size="medium">Læs om tilbudet</Button>
           </a>
         </div>
-      </div>
+      </section>
     </main>
+
     <div class="grid-11">
       <img src="/public/img/pizza3.webp" alt="" />
       <img src="/public/img/pasta.webp" alt="" />
@@ -151,7 +160,6 @@ import MainLayout from "../MainLayout.astro";
       margin-top: 100px;
       width: fit-content;
     }
-
 
     @media screen and (max-width: 768px) {
       .pizza1 {
