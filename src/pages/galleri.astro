@@ -4,7 +4,7 @@ import MainLayout from "../MainLayout.astro";
 ---
 
 <MainLayout>
-  <h1>GALLERI</h1>
+  <h1>Galleri</h1>
   <div class="grid_1-1">
     <div class="image">
       <img src="/public/img/topizzaer.webp" alt="to pizzaer" />
@@ -64,22 +64,16 @@ import MainLayout from "../MainLayout.astro";
     .grid_1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      justify-content: center;
+      gap: 10px;
       row-gap: 10px;
     }
 
     h1 {
       text-align: center;
     }
-
     img {
-      max-width: 80%;
-      height: auto;
-      padding: 20px;
-    }
-    image {
-      display: flex;
-      justify-content: center;
+      margin-left: 50px;
+      margin-right: 70px;
     }
   }
 </style>
