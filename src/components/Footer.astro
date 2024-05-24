@@ -17,8 +17,14 @@
     </div>
     <div>
       <h3>Find os på socials</h3>
-      <img src="" alt="" />
-      <img src="" alt="" />
+
+      <a href="https://www.instagram.com/bikeandbakepizza/"
+        ><img src="/public/img/instagram.svg" alt="Instagram" /></a
+      >
+
+      <a href="https://www.facebook.com/bikeandbakecopenhagen"
+        ><img src="/public/img/facebook.svg" alt="Facebook" /></a
+      >
     </div>
   </div>
 </section>
@@ -27,7 +33,7 @@
   .grid_1-1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 100px;
+    gap: 30px;
   }
   .footer {
     box-shadow: inset 0 1px 0 #cd3a25;
@@ -41,10 +47,22 @@
     font-size: 15px;
     color: #cd3a25;
   }
-
+  img {
+    max-width: 35%;
+  }
   @media screen and (min-width: 768px) {
     h3 {
       font-size: 20px;
+    }
+    .grid_1-1-1 {
+      gap: 40px;
+      margin-left: 200px;
+    }
+    img {
+      max-width: 20%;
+    }
+    p {
+      font-size: 18px;
     }
   }
 </style>
