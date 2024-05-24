@@ -9,6 +9,8 @@ import MainLayout from "../MainLayout.astro";
   <body>
     <main class="container">
       <div>
+        <div class="front">
+          <div>
         <h1>Bake and Bake</h1>
         <h2>Book din personlige pizzabager</h2>
         <p>
@@ -16,11 +18,11 @@ import MainLayout from "../MainLayout.astro";
           oplevelse. Vi kan bookes til små og store arrangementer - og tilpasser
           os til dit behov og dit hjem.
         </p>
-        <div>
+      </div>
           <div class="bike">
           <img src="/public/img/pizzabike.webp" alt="bike" />
         </div>
-        </div>
+      </div>
         <section class="box">
           <div class="grid_3">
             <img class="mc" src="/public/img/cykelkbh.webp" alt="bike" />
@@ -84,7 +86,7 @@ import MainLayout from "../MainLayout.astro";
           </a>
         </div>
       </div>
-    </main>
+    
     <div class="grid-11">
       <img src="/public/img/pizza3.webp" alt="" />
       <img src="/public/img/pasta.webp" alt="" />
@@ -97,6 +99,9 @@ import MainLayout from "../MainLayout.astro";
       <img src="/public/img/pizza2.webp" alt="" />
     </div>
   </body>
+</main>
+</MainLayout>
+
   <style>
     .form-felt2 {
       z-index: 1;
@@ -171,10 +176,12 @@ import MainLayout from "../MainLayout.astro";
     }
 
     @media screen and (min-width: 768px) {
-      .bike {
+      .front{
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
       }
     }
+
   </style>
-</MainLayout>
+
