@@ -3,44 +3,62 @@ import MainLayout from "../MainLayout.astro";
 ---
 
 <MainLayout>
-    <main>
-    <h1>MADLAVNINGSKURSER</h1>
+  <main>
+    <h1>Madlavningskurser</h1>
     <div class="grid_1-1">
-        <div> <img src="/img/mad1.webp" alt=""> </div>
-        <div> <img src="/img/mad2.webp" alt=""> 
-    <img src="/img/topersoner.webp" alt=""> </div>
+      <div><img src="/img/mad1.webp" alt="" /></div>
+      <div>
+        <img src="/img/mad2.webp" alt="" />
+        <img src="/img/topersoner.webp" alt="" />
+      </div>
     </div>
     <h3>Michele tilbyder madlavningskurser</h3>
-    <p>Drømmer du om at mestre kunsten at lave autentisk, italiensk mad fra bunden? Vores madkursus er skabt for dig, der ønsker at opleve den ægte smag af Italien i dit eget køkken. </p>
-       <p> Tag med på en kulinarisk rejse til Italien og lær at lave pasta, der vil imponere dine venner og familie. Tilmeld dig vores kursus i dag og oplev glæden ved at lave ægte, italiensk pasta fra bunden!</p>
+    <p>
+      Drømmer du om at mestre kunsten at lave autentisk, italiensk mad fra
+      bunden? Vores madkursus er skabt for dig, der ønsker at opleve den ægte
+      smag af Italien i dit eget køkken.
+    </p>
+    <p>
+      Tag med på en kulinarisk rejse til Italien og lær at lave pasta, der vil
+      imponere dine venner og familie. Tilmeld dig vores kursus i dag og oplev
+      glæden ved at lave ægte, italiensk pasta fra bunden!
+    </p>
     <h3>Skriv til madlavning@michele.dk for at booke madlavningskursus</h3>
     <section class="grid_1-1">
-        <div><img src="" alt="Pizza"></div>
-        <div><img src="" alt="Pasta"></div>
-        <div><img src="" alt="Antipasti"></div>
-        <div><img src="" alt="Dessert"></div>
+      <div><img src="" alt="Pizza" /></div>
+      <div><img src="" alt="Pasta" /></div>
+      <div><img src="" alt="Antipasti" /></div>
+      <div><img src="" alt="Dessert" /></div>
     </section>
-</main>
-
+  </main>
 </MainLayout>
 
 <style>
-    .grid_1-1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-img {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  img {
     max-width: 100%;
-}
-    h1 {
-        text-align: center;
+  }
+  h1 {
+    text-align: center;
+  }
+  h3 {
+    text-align: left;
+  }
+  img {
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    main {
+      margin-left: 200px;
+      margin-right: 200px;
     }
-    h3 {
-        text-align: center;
+    ¨ .grid_1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
-    img {
-        width: 100%;
-    }
+  }
 </style>
-
