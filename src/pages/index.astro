@@ -19,9 +19,7 @@ import MainLayout from "../MainLayout.astro";
               tilpasser os til dit behov og dit hjem.
             </p>
           </div>
-          <div class="bike">
-            <img src="/img/pizzabike.webp" alt="bike" />
-          </div>
+            <img class="bike" src="/img/pizzabike.webp" alt="bike" />
         </div>
 
         <section class="sektion">
@@ -47,11 +45,7 @@ import MainLayout from "../MainLayout.astro";
         </section>
         <div>
           <section class="sektion">
-            <img class="knallert" src="/img/knallert.webp" alt="" />
-
-            <img class="pizza3" src="/img/pizza3.webp" alt="" />
-            <img class="pizza1" src="/img/pizza1.webp" alt="" />
-            <img class="bestik" src="/img/bestik.webp" alt="" />
+  
             <Booking class="book" />
           </section>
         </div>
@@ -65,18 +59,27 @@ import MainLayout from "../MainLayout.astro";
           </section>
         </section>
         <section class="sektion">
-          <p>
+          <div class = "grid_1-1">
+          <div>
             <h3>Madlavningskurser</h3>
-            Vil du gerne udvide din viden indenfor det italienske køkken, eller lære
+            <p> Vil du gerne udvide din viden indenfor det italienske køkken, eller lære
             hvordan man laver den bedste pizzadej? Drømmer du om duften af friskbagt
             brød, smagen af autentisk pasta og den uforglemmelige oplevelse af ægte
             italiensk madlavning? Nu har du chancen for at bringe Italien direkte
             ind i dit køkken! Du kan nu booke et madkursus hos Michele!
           </p>
+          
           <div class="knap2">
             <a href="/kursus">
               <Button variant="primary" size="medium">Læs om tilbudet</Button>
             </a>
+          </div>
+        </div>
+        <div>
+          <img class="pizza3" src="/img/pizza3.webp" alt="" />
+          <img class="pizza1" src="/img/pizza1.webp" alt="" />
+          <img class="bestik" src="/img/bestik.webp" alt="" />
+        </div>
           </div>
         </section>
       </section>
@@ -94,9 +97,10 @@ import MainLayout from "../MainLayout.astro";
         width: 100%;
       }
       .bike {
-        max-width: 60%;
+        max-width: 100%;
+position: relative;
+margin-top: 20%;
       }
-
       .grid_1-1 img {
         max-width: 100%;
       }
@@ -171,8 +175,7 @@ import MainLayout from "../MainLayout.astro";
       }
 
       @media screen and (min-width: 768px) {
-        .bike {
-        }
+  
         .grid_1-1 {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -193,6 +196,10 @@ import MainLayout from "../MainLayout.astro";
         .index1 {
           max-height: 84%;
           width: 100%;
+        }
+        .front {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
         }
       }
     </style>
