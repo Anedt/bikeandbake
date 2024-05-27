@@ -1,6 +1,21 @@
 ---
 import MainLayout from "../MainLayout.astro";
+import "../styles/generel.css";
+import Kurser from "../components/kurser.astro";
+
+const data = await fetch(
+  "https://fisxfvyrriqnsrbvxcmu.supabase.co/rest/v1/kursurs",
+{
+method: "GET",
+headers: {
+  apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZpc3hmdnlycmlxbnNyYnZ4Y211Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU4NDg5MDgsImV4cCI6MjAzMTQyNDkwOH0.5lrBoPFJ4FjT9V9DBJyvo0pcABFHQsghMHx2TlHhV3o"
+}
+}
+).then(res=>res.json()); 
+
+  console.log(data);
 ---
+
 
 <MainLayout>
   <main>
@@ -26,12 +41,24 @@ import MainLayout from "../MainLayout.astro";
     </p>
     <h3>Skriv til madlavning@michele.dk for at booke madlavningskursus</h3>
     <section class="grid_1-1">
-        <div><img class="pizza" src="/img/pizza1.webp" alt="Pizza"></div>
-        <div><img class="pasta" src="/img/pasta.webp" alt="Pasta"></div>
-        <div><img class="antipasti" src="/img/antipasti.webp" alt="Antipasti"></div>
-        <div><img class="dessert" src="/img/is.webp" alt="Dessert"></div>
+      {
+      data.map((kurs)=>{
+return <Kurser data={kurs}/>;
+      })
+    }
     </section>
   </main>
+
+  <div><img class="pizza" src="/img/pizza1.webp" alt="Pizza"></div>
+</a>
+<a href="">
+  <div><img class="pasta" src="/img/pasta.webp" alt="Pasta"></div>
+</a> 
+<a href="">
+<div><img class="antipasti" src="/img/antipasti.webp" alt="Antipasti"></div>
+</a>
+<a href="">
+<div><img class="dessert" src="/img/is.webp" alt="Dessert"></div>
 </MainLayout>
 
 <style>
