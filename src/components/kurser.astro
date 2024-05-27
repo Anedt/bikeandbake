@@ -1,0 +1,11 @@
+---
+const {data} = Astro.props;
+console.log(data);
+---
+
+<a href={`kurs/${data.slug}`}>
+<article>
+    <h3>{data.Tittel}</h3>
+    <img src="{data.image}" alt={data.Tittel}>
+</article>
+</a>
