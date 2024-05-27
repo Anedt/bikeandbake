@@ -16,12 +16,6 @@ import Button from "../components/Button.astro";
           <input type="email" name="email" required />
         </label>
         <label>
-          <span><p>Dato</p></span>
-          <input type="date" name="navn" required />
-        </label>
-      </div>
-      <div class="grid_5">
-        <label>
           <span><p>Antal pers.</p></span>
           <input type="number" name="email" required />
         </label>
@@ -29,10 +23,15 @@ import Button from "../components/Button.astro";
           <span><p>Lokation</p></span>
           <input type="text" name="lokation" required />
         </label>
-
-        <div class="knap1">
-          <Button variant="primary" size="small">Insend</Button>
-        </div>
+        <label>
+          <span><p>Dato</p></span>
+          <input type="date" name="navn" required />
+        </label>
+        <label class="knap2">
+          <div class="knap1">
+            <Button variant="primary" size="small"> Insend </Button>
+          </div>
+        </label>
       </div>
     </div>
   </div>
@@ -40,14 +39,15 @@ import Button from "../components/Button.astro";
 
 <style>
   .form-felt {
-    border-radius:;
-    width: 800px;
-    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
     box-sizing: border-box;
+    border: 2px solid white;
     background-color: rgba(247, 246, 245, 0.4);
   }
   h2 {
@@ -55,49 +55,45 @@ import Button from "../components/Button.astro";
     color: #285632;
   }
   .knap1 {
-    margin-bottom: 50px;
+    margin-left: 90px;
   }
 
   input {
-    display: block;
     border-radius: 10px;
     border: 2px solid white;
     background-color: transparent;
     height: 30px;
-    margin: 10px 0;
+    margin: 15px 0px;
     padding: 5px;
-    flex: 1;
   }
-  textarea {
-    border: 2px solid #285632;
-    background-color: transparent;
-    border-radius: 15px;
-    height: 50px;
-    max-height: 800px;
-    width: 250px;
-  }
-
   label {
     display: flex;
-    align-items: center;
+
     justify-content: space-between;
   }
 
   label > span {
-    flex: 1;
     margin-right: 5px;
   }
-  .grid_5 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+
   @media screen and (min-width: 768px) {
-    .knap1 {
-      margin-top: -8%;
-      margin-left: 10%;
+    .grid_5 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
     .form-felt {
-      height: 700px;
+      width: 800px;
+    }
+    .knap1 {
+      margin-left: 150px;
+    }
+    input {
+      margin: 15px 28px;
+    }
+    .knap2 {
+      margin-top: -25px;
+      margin-left: 50px;
     }
   }
 </style>
