@@ -77,10 +77,11 @@ import MainLayout from "../MainLayout.astro";
             filosofi er at holde menuen enkel og velsmagende.
           </p>
         </div>
-        <div class="vertical-line"></div>
+
         <div class="mad">
+          <div class="vertical-line"></div>
           <h3>Gelato</h3>
-          <img src="/img/is.webp" alt="Centered Image" />
+          <img class="is" src="/img/is.webp" alt="Centered Image" />
           <p>
             Vi har 4 forskellige slags gelato: mango og jordbær som sorbet, og
             vi har fiordilatte (mælkesmag) og kaffesmag. Gelatoen er lavet på en
@@ -159,6 +160,7 @@ import MainLayout from "../MainLayout.astro";
       margin-left: 100px;
       margin-right: 100px;
       margin-top: 20px;
+      margin-bottom: 100px;
     }
     h3 {
       font-size: 28px;
@@ -168,8 +170,16 @@ import MainLayout from "../MainLayout.astro";
     }
     .vertical-line {
       border-left: 1px solid #cc3a25;
-      height: 200px;
+      margin-top: 40px;
+      height: 400px;
       z-index: 2;
+      position: absolute;
+    }
+    .is {
+      max-width: 70px;
+    }
+    img {
+      margin-top: -20px;
     }
   }
 </style>
