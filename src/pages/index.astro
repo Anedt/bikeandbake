@@ -19,7 +19,7 @@ import MainLayout from "../MainLayout.astro";
               tilpasser os til dit behov og dit hjem.
             </p>
           </div>
-            <img class="bike" src="/img/pizzabike.webp" alt="bike" />
+          <img class="bike" src="/img/pizzabike.webp" alt="bike" />
         </div>
 
         <section class="sektion">
@@ -58,25 +58,29 @@ import MainLayout from "../MainLayout.astro";
           </section>
         </section>
         <section class="sektion">
-          <div class = "grid_1-1">
-          <div class="madtext">
-            <h3>Madlavningskurser</h3>
-            <p> Vil du gerne udvide din viden indenfor det italienske køkken, eller lære
-            hvordan man laver den bedste pizzadej? Drømmer du om duften af friskbagt
-            brød, smagen af autentisk pasta og den uforglemmelige oplevelse af ægte
-            italiensk madlavning? Nu har du chancen for at bringe Italien direkte
-            ind i dit køkken! Du kan nu booke et madkursus hos Michele!
-          </p>
-          <div class="knap2">
-            <a href="/kursus">
-              <Button variant="primary" size="medium">Læs om tilbudet</Button>
-            </a>
-          </div>
-        </div>
-        <div>
-          <img class="pizza3" src="/img/pizza3.webp" alt="" />
-          <img class="pizza1" src="/img/pizza1.webp" alt="" />
-        </div>
+          <div class="grid_1-1">
+            <div class="madtext">
+              <h3>Madlavningskurser</h3>
+              <p>
+                Vil du gerne udvide din viden indenfor det italienske køkken,
+                eller lære hvordan man laver den bedste pizzadej? Drømmer du om
+                duften af friskbagt brød, smagen af autentisk pasta og den
+                uforglemmelige oplevelse af ægte italiensk madlavning? Nu har du
+                chancen for at bringe Italien direkte ind i dit køkken! Du kan
+                nu booke et madkursus hos Michele!
+              </p>
+              <div class="knap2">
+                <a href="/kursus">
+                  <Button variant="primary" size="medium"
+                    >Læs om tilbudet</Button
+                  >
+                </a>
+              </div>
+            </div>
+            <div>
+              <img class="pizza3" src="/img/pizza3.webp" alt="" />
+              <img class="pizza1" src="/img/pizza1.webp" alt="" />
+            </div>
           </div>
         </section>
       </section>
@@ -95,8 +99,8 @@ import MainLayout from "../MainLayout.astro";
       }
       .bike {
         max-width: 100%;
-position: relative;
-margin-top: 20%;
+        position: relative;
+        margin-top: 20%;
       }
       .grid_1-1 img {
         max-width: 100%;
@@ -175,7 +179,6 @@ margin-top: 20%;
       }
 
       @media screen and (min-width: 768px) {
-  
         .grid_1-1 {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -184,7 +187,7 @@ margin-top: 20%;
         }
 
         .grid_1-1 img {
-        margin-top: 20%;
+          margin-top: 20%;
         }
 
         .grid_1-1-1 {
