@@ -10,7 +10,7 @@ import MainLayout from "../MainLayout.astro";
     <main class="container">
       <section class="sektion">
         <div class="front">
-          <div>
+          <div class="madtext">
             <h1>Bike and Bake</h1>
             <h2>Book din personlige pizzabager</h2>
             <p>
@@ -86,9 +86,6 @@ import MainLayout from "../MainLayout.astro";
       </section>
     </main>
     <style>
-      .form-felt2 {
-        z-index: 1;
-      }
       .grid-11 {
         display: grid;
         grid-template-columns: repeat(9, 1fr);
@@ -103,39 +100,29 @@ import MainLayout from "../MainLayout.astro";
         margin-top: 20%;
       }
       .grid_1-1 img {
-        max-width: 100%;
+        max-width: 90%;
+        padding: 5%;
       }
 
       img {
         max-width: 80%;
         align-items: center;
       }
-      .blade1 {
+      img.blade1 {
         position: relative;
         max-width: auto;
         max-height: 6%;
-        z-index: 1;
         transform: rotate(180deg);
         margin-top: 2%;
+        z-index: 2;
       }
-      .blade2 {
+      img.blade2 {
         max-width: auto;
         max-height: 8%;
         margin-left: 55%;
         z-index: 2;
       }
 
-      .pizza1 {
-        z-index: 2;
-        max-height: 38%;
-        margin-left: 6%;
-      }
-      .pizza3 {
-        z-index: 2;
-        max-height: 25%;
-        margin-left: -40px;
-        margin-bottom: -120px;
-      }
       .bestik {
         max-height: 15%;
       }
@@ -143,8 +130,9 @@ import MainLayout from "../MainLayout.astro";
       .grid_1-1-1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 5px;
+        gap: 10px;
         margin: 10px;
+        padding: 10px;
       }
       .grid_1-1-1 img {
         max-width: 100%;
@@ -159,7 +147,22 @@ import MainLayout from "../MainLayout.astro";
         margin-top: 50px;
         margin-bottom: 50px;
       }
-
+      .knap2 {
+        margin-left: 90px;
+        margin-top: -0px;
+      }
+      .box p,
+      h3 {
+        margin: 20px;
+      }
+      .madtext {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .book1 {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
       @media screen and (max-width: 768px) {
         .bike {
           display: none;
@@ -167,13 +170,20 @@ import MainLayout from "../MainLayout.astro";
         .knallert {
           display: none;
         }
-        .mc {
+        .index1 {
           display: none;
         }
+
         .pizza1 {
           display: none;
         }
-        .index1 {
+        .pizza3 {
+          display: none;
+        }
+        .blade2 {
+          display: none;
+        }
+        .blade1 {
           display: none;
         }
       }
@@ -212,6 +222,17 @@ import MainLayout from "../MainLayout.astro";
 
         .madtext {
           margin-left: 25px;
+        }
+        .pizza1 {
+          z-index: 2;
+          max-height: 38%;
+          margin-left: 6%;
+        }
+        .pizza3 {
+          z-index: 2;
+          max-height: 25%;
+          margin-left: -40px;
+          margin-bottom: -120px;
         }
       }
     </style>
