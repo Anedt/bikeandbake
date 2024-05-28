@@ -27,8 +27,8 @@ import MainLayout from "../MainLayout.astro";
             <div class="grid_1-1">
               <img class="mc" src="/img/cykelkbh.webp" alt="bike" />
               <div>
-                <img class="blade2" src="/img/blade.webp" alt="" />
-                <img class="blade1" src="/img/blade.webp" alt="" />
+                <img class="blade2" src="/img/blade.webp" alt="blad" />
+                <img class="blade1" src="/img/blade.webp" alt="blad" />
                 <h3>Om os</h3>
                 <p>
                   Bike and Bake, er et catering firma, som startede med ideen om
@@ -91,14 +91,11 @@ import MainLayout from "../MainLayout.astro";
     .madtext {
       margin: 30px;
     }
-      .grid-11 {
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        gap: 10px;
-      }
-      .grid-11 img {
-        width: 100%;
-      }
+
+    p {
+      padding-bottom: 50px;
+    }
+
       .bike {
         max-width: 100%;
         position: relative;
@@ -108,7 +105,10 @@ import MainLayout from "../MainLayout.astro";
         max-width: 90%;
         padding: 5%;
       }
+.grid_1-1 p, h3 {
+  margin: 15px;
 
+}
       img {
         max-width: 80%;
         align-items: center;
@@ -119,13 +119,11 @@ import MainLayout from "../MainLayout.astro";
         max-height: 6%;
         transform: rotate(180deg);
         margin-top: 1%;
-        z-index: 2;
       }
       img.blade2 {
         max-width: auto;
         max-height: 8%;
         margin-right: 200px;
-        z-index: 2;
       }
 
       .bestik {
@@ -145,7 +143,6 @@ import MainLayout from "../MainLayout.astro";
 
       .knap2 {
         margin-left: 18%;
-        margin-top: 60px;
         width: fit-content;
       }
       .sektion {
