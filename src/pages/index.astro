@@ -22,7 +22,7 @@ import MainLayout from "../MainLayout.astro";
           <img class="bike" src="/img/pizzabike.webp" alt="bike" />
         </div>
 <img class="pil" src="/img/pil.svg" alt="">
-        <section class="sektion">
+        <section class="sektion1">
           <section class="box">
             <div class="grid_1-1">
               <img class="mc" src="/img/cykelkbh.webp" alt="bike" />
@@ -142,6 +142,10 @@ import MainLayout from "../MainLayout.astro";
         margin-top: 50px;
         margin-bottom: 50px;
       }
+      .sektion1 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
       .book1 {
         margin-left: 20px;
         margin-right: 20px;
@@ -206,7 +210,7 @@ import MainLayout from "../MainLayout.astro";
           padding-top: 50px;
         }
         .index1 {
-          max-height: 84%;
+          max-height: 74%;
           width: 100%;
         }
         .front {
@@ -224,11 +228,11 @@ import MainLayout from "../MainLayout.astro";
           margin-left: 70px;
         }
         .pizza1 {
-          z-index: 2;
+          
           max-height: 38%;
         }
         .pizza3 {
-          z-index: 2;
+          
           max-height: 25%;
           margin-left: -40px;
           margin-bottom: -120px;
@@ -243,4 +247,14 @@ import MainLayout from "../MainLayout.astro";
       }
     </style>
   </body>
+  <script>
+
+    document. querySelector('.pil').addEventListener('click', () => {
+      window.scrollTo({
+        top: 10,
+        behavior: 'smooth'
+      });
+    });
+
+  </script>
 </MainLayout>
