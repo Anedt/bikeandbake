@@ -21,7 +21,7 @@ import MainLayout from "../MainLayout.astro";
           </div>
           <img class="bike" src="/img/pizzabike.webp" alt="bike" />
         </div>
-
+<img class="pil" src="/img/pil.svg" alt="">
         <section class="sektion">
           <section class="box">
             <div class="grid_1-1">
@@ -121,7 +121,6 @@ import MainLayout from "../MainLayout.astro";
         max-width: auto;
         max-height: 8%;
         margin-right: 200px;
-
         z-index: 2;
       }
 
@@ -141,23 +140,13 @@ import MainLayout from "../MainLayout.astro";
       }
 
       .knap2 {
-        margin: 0 auto;
-        margin-top: 100px;
+        margin-left: 18%;
+        margin-top: 60px;
         width: fit-content;
       }
       .sektion {
         margin-top: 50px;
         margin-bottom: 50px;
-      }
-      .knap2 {
-        margin-left: 90px;
-        margin-top: -0px;
-      }
-
-     
-      .madtext {
-        margin-left: 30px;
-        margin-right: 20px;
       }
       .book1 {
         margin-left: 20px;
@@ -186,6 +175,9 @@ import MainLayout from "../MainLayout.astro";
         .blade1 {
           display: none;
         }
+        .pil {
+          display: none;
+        }
       }
 
       @media screen and (min-width: 768px) {
@@ -203,8 +195,9 @@ import MainLayout from "../MainLayout.astro";
         .grid_1-1-1 {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          gap: 9px;
-          margin: 60px;
+          gap: 10px;
+          margin: 50px;
+          padding-top: 50px;
         }
         .index1 {
           max-height: 84%;
@@ -213,6 +206,7 @@ import MainLayout from "../MainLayout.astro";
         .front {
           display: grid;
           grid-template-columns: 1fr 1fr;
+          margin-top: 7%;
         }
         .book1 {
           margin-left: 22%;
@@ -232,6 +226,13 @@ import MainLayout from "../MainLayout.astro";
           max-height: 25%;
           margin-left: -40px;
           margin-bottom: -120px;
+        }
+        .pil {
+          margin-left: 49%;
+          margin-top: 4%;
+        }
+        .box {
+          max-height: 80%;
         }
       }
     </style>

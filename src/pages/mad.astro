@@ -57,7 +57,7 @@ import MainLayout from "../MainLayout.astro";
       <div class="grid_3">
         <div class="mad">
           <h3>Antipasto</h3>
-          <img src="/img/antipasti.webp" alt="Centered Image" />
+          <img class="anti" src="/img/antipasti.webp" alt="Centered Image" />
           <p>
             Vi serverer en type antipasto som, er populær fra og aktuel i
             ladsdistrikterne rundt omkring i Italien. Det er bruschetta, ristet
@@ -70,7 +70,7 @@ import MainLayout from "../MainLayout.astro";
         <div class="mad">
           <div class="vertical-line"></div>
           <h3>Pizza</h3>
-          <img src="/img/pizza1.webp" alt="Centered Image" />
+          <img class="pizza1" src="/img/pizza1.webp" alt="Centered Image" />
           <p>
             Vores pizza menu består af 6 forskellige pizzaer; 3 vegetariske og 3
             med kød. Menustilen er minimal, men med kvalitetsråvarer. Vores
@@ -125,10 +125,10 @@ import MainLayout from "../MainLayout.astro";
   }
 
   img {
-    max-width: 20%;
-    height: auto;
-    margin-left: 180px;
+    max-width: 28%;
+    margin-left: 38%;
   }
+
   .piz {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -138,7 +138,6 @@ import MainLayout from "../MainLayout.astro";
     margin-left: 10%;
     margin-top: 30px;
   }
-
   @media screen and (min-width: 768px) {
     p {
       margin-left: 20px;
@@ -155,6 +154,7 @@ import MainLayout from "../MainLayout.astro";
     .grid_3 {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: 6%;
     }
     .sektion {
       margin-left: 100px;
@@ -170,16 +170,28 @@ import MainLayout from "../MainLayout.astro";
     }
     .vertical-line {
       border-left: 1px solid #cc3a25;
-      margin-top: 40px;
+      margin-top: 120px;
       height: 400px;
       z-index: 2;
       position: absolute;
     }
     .is {
-      max-width: 70px;
+      max-height: 24%;
+      margin-left: 43%;
+      margin-top: 2%;
+      margin-bottom: 3%;
     }
-    img {
-      margin-top: -20px;
+
+    .anti {
+      margin-top: 10%;
+      margin-bottom:11%;
+      width: 30%;
     }
+    .pizza1 {
+      margin-top: 5%;
+      margin-bottom: 6%;
+      width: 24%;
+    }
+
   }
 </style>
