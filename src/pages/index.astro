@@ -52,8 +52,8 @@ import MainLayout from "../MainLayout.astro";
         <section class="sektion">
           <section class="box">
             <div class="grid_1-1-1">
-              <img src="/img/index3.webp" alt="" />
-              <img src="/img/index6.webp" alt="" />
+              <img class="index3" src="/img/index3.webp" alt="" />
+              <img class="index2" src="/img/index6.webp" alt="" />
               <img class="index1" src="/img/index1.webp" alt="" />
             </div>
           </section>
@@ -209,11 +209,16 @@ import MainLayout from "../MainLayout.astro";
         .grid_1-1-1 {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          gap: 10px;
+          gap: 40px;
           padding-top: 50px;
         }
         .index1 {
-          max-height: 79%;
+          max-height: 80%;
+          width: 100%;
+        }
+
+        .index2 {
+          max-height: 90%;
           width: 100%;
         }
         .front {
@@ -250,6 +255,16 @@ import MainLayout from "../MainLayout.astro";
         .mc.enlarged {
             transform: scale(1.05); 
       }
+      .index1.enlarged {
+            transform: scale(1.05); 
+      }
+      .index2.enlarged {
+            transform: scale(1.05); 
+      }
+      .index3.enlarged {
+            transform: scale(1.05); 
+      }
+
     </style>
   </body>
   <script>
@@ -266,6 +281,33 @@ import MainLayout from "../MainLayout.astro";
     image.addEventListener('mouseleave', () => {
         image.classList.remove('enlarged');
     });
+
+    const image1 = document.querySelector('.index1');
+
+    image1.addEventListener('mouseenter', () => {
+        image1.classList.add('enlarged');
+    });
+    image1.addEventListener('mouseleave', () => {
+        image1.classList.remove('enlarged');
+    });
+
+    const image2 = document.querySelector('.index2');
+
+image2.addEventListener('mouseenter', () => {
+    image2.classList.add('enlarged');
+});
+image2.addEventListener('mouseleave', () => {
+    image2.classList.remove('enlarged');
+});
+
+const image3 = document.querySelector('.index3');
+
+image3.addEventListener('mouseenter', () => {
+    image3.classList.add('enlarged');
+});
+image3.addEventListener('mouseleave', () => {
+    image3.classList.remove('enlarged');
+});
   </script>
-  
+
 </MainLayout>

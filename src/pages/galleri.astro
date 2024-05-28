@@ -36,6 +36,27 @@ import MainLayout from "../MainLayout.astro";
       h1 {
         text-align: center;
       }
+
+      @media screen and (max-width: 800px){
+        img {
+            width: 90%;
+            margin: 20px;
+            margin-bottom: 10%;
+        }
+
+        .nav-button.next {
+          display: none;
+        }
+
+        .nav-button.prev {
+          display: none;
+        }
+
+      }
+
+      @media screen and (min-width: 800px){
+        
+      
         .karusel {
             display: flex;
             justify-content: center;
@@ -69,7 +90,7 @@ import MainLayout from "../MainLayout.astro";
         }
         .nav-button {
             position: absolute;
-            top: 30%;
+            top: 25%;
             transform: translateY(-50%);
             background-color: rgba(0, 0, 0, 0.5);
             border: none;
@@ -84,6 +105,9 @@ import MainLayout from "../MainLayout.astro";
         .nav-button.next {
             right: 10px;
         }
+
+
+      }
     </style>
 
 
