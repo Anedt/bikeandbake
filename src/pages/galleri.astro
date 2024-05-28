@@ -3,79 +3,135 @@ import "../styles/generel.css";
 import MainLayout from "../MainLayout.astro";
 ---
 
-<MainLayout>
-  <h1>Galleri</h1>
-  <div class="grid_1-1">
-    <div class="image">
-      <img src="/public/img/topizzaer.webp" alt="to pizzaer" />
-    </div>
 
-    <div class="image">
-      <img src="/public/img/foredrag.webp" alt="to pizzaer" />
+<body>
+  <MainLayout>
+    <main>
+      <h1>Galleri</h1>
+      <section class="karusel">
+<div class="carousel">
+    <button class="nav-button prev">❮</button>
+    <div class="carousel-track">
+        <div class="carousel-item"><img src="/img/topizzaer.webp" alt="to pizzaer"></div>
+        <div class="carousel-item"><img src="/img/"></div>
+        <div class="carousel-item"><img src="/img/foredrag.webp" alt="foredrag"></div>
+        <div class="carousel-item"><img src="/img/børsen.webp" alt="børsen"></div>
+        <div class="carousel-item"><img src="/img/"></div>
+        <div class="carousel-item"><img src="/img/topersoner.webp" alt="to personer"></div>
+        <div class="carousel-item"><img src="/img/pizzaovn.webp" alt="pizzaovn"></div>
+        <div class="carousel-item"><img src="/img/"></div>
+        <div class="carousel-item"><img src="/img/cykelkbh.webp" alt="cykelkbh"></div>
+        <div class="carousel-item"><img src="/img/"></div>
+        <div class="carousel-item"><img src="/img/pizzalaver.webp" alt="pizzalaver"></div>
+        <div class="carousel-item"><img src="/img/cutter.webp" alt="cutter"></div>
     </div>
+    <button class="nav-button next">❯</button>
+</div>
+      </section>
+    </main>
 
-    <div class="image">
-      <img src="/public/img/børsen.webp" alt="to pizzaer" />
-    </div>
 
-    <div class="image">
-      <img src="/public/img/topersoner.webp" alt="to pizzaer" />
-    </div>
+    <style>
 
-   
+      h1 {
+        text-align: center;
+      }
+        .karusel {
+            display: flex;
+            justify-content: center;
+            margin-top: 7%;
+            height: 75vh;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 1300px;
+            overflow: hidden;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            flex: 0 0 33.33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item img {
+            width: 100%;
+            display: block;
+        }
+        .carousel-item.middle img {
+            transform: scale(1.2);
+            padding: 10%;
+        }
+        .nav-button {
+            position: absolute;
+            top: 30%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .nav-button.prev {
+            left: 10px;
+            z-index: 1;
+        }
+        .nav-button.next {
+            right: 10px;
+        }
+    </style>
 
-    <div class="image">
-      <img src="/public/img/pizzaovn.webp" alt="to pizzaer" />
-    </div>
 
-    <div class="image">
-      <img src="/public/img/cykelkbh.webp" alt="to pizzaer" />
-    </div>
+<script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.nav-button.next');
+    const prevButton = document.querySelector('.nav-button.prev');
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    let currentIndex = 0;
 
-    <div class="image">
-      <img src="/public/img/pizzalaver.webp" alt="to pizzaer" />
-    </div>
+    const updateCarousel = () => {
+        track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
+        slides.forEach((slide, index) => {
+            if (index === currentIndex + 1) {
+                slide.classList.add('middle');
+            } else {
+                slide.classList.remove('middle');
+            }
+        });
+    };
 
-    <div class="image">
-      <img src="/public/img/cutter.webp" alt="to pizzaer" />
-    </div>
-  </div>
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < slides.length - 3) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateCarousel();
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = slides.length - 3;
+        }
+        updateCarousel();
+    });
+
+    window.addEventListener('resize', () => {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        updateCarousel();
+    });
+
+    updateCarousel();
+</script>
+
+</body>
 </MainLayout>
-
-<style>
-  h1 {
-    text-align: center;
-  }
-
-  img {
-    max-width: 75%;
-    padding-left: 50px;
-    padding-bottom: 10px;
-  }
-
-  image {
-    display: flex;
-    justify-content: center;
-  }
-
-  main {
-    align-content: center;
-  }
-
-  @media screen and (min-width: 768px) {
-    .grid_1-1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      row-gap: 10px;
-    }
-
-    h1 {
-      text-align: center;
-    }
-    img {
-      margin-left: 50px;
-      margin-right: 70px;
-    }
-  }
-</style>
+</html>

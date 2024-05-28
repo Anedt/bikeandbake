@@ -25,7 +25,9 @@ import MainLayout from "../MainLayout.astro";
         <section class="sektion1" id="sektion1">
           <section class="box">
             <div class="grid_1-1">
+              <a href="/omos">
               <img class="mc" src="/img/cykelkbh.webp" alt="bike" />
+            </a>
               <div class="omos">
                 <h3>Om os</h3>
                 <p>
@@ -245,6 +247,8 @@ import MainLayout from "../MainLayout.astro";
           margin-top: 28%;
           margin-left: 2%;
         }
+        .mc.enlarged {
+            transform: scale(1.05); 
       }
     </style>
   </body>
@@ -253,6 +257,15 @@ import MainLayout from "../MainLayout.astro";
     document. querySelector('.pil').addEventListener('click', () => {
       document.getElementById('sektion1').scrollIntoView({ behavior: 'smooth' });
     });
+    
+    const image = document.querySelector('.mc');
 
+    image.addEventListener('mouseenter', () => {
+        image.classList.add('enlarged');
+    });
+    image.addEventListener('mouseleave', () => {
+        image.classList.remove('enlarged');
+    });
   </script>
+  
 </MainLayout>
