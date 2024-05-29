@@ -21,14 +21,14 @@ import MainLayout from "../MainLayout.astro";
           </div>
           <img class="bike" src="/img/pizzabike.webp" alt="bike" />
         </div>
-
-        <section class="sektion">
+<img class="pil" src="/img/pil.svg" alt="">
+        <section class="sektion1" id="sektion1">
           <section class="box">
             <div class="grid_1-1">
+              <a href="/omos">
               <img class="mc" src="/img/cykelkbh.webp" alt="bike" />
-              <div>
-                <img class="blade2" src="/img/blade.webp" alt="" />
-                <img class="blade1" src="/img/blade.webp" alt="" />
+            </a>
+              <div class="omos">
                 <h3>Om os</h3>
                 <p>
                   Bike and Bake, er et catering firma, som startede med ideen om
@@ -52,8 +52,8 @@ import MainLayout from "../MainLayout.astro";
         <section class="sektion">
           <section class="box">
             <div class="grid_1-1-1">
-              <img src="/img/index3.webp" alt="" />
-              <img src="/img/index6.webp" alt="" />
+              <img class="index3" src="/img/index3.webp" alt="" />
+              <img class="index2" src="/img/index6.webp" alt="" />
               <img class="index1" src="/img/index1.webp" alt="" />
             </div>
           </section>
@@ -87,27 +87,26 @@ import MainLayout from "../MainLayout.astro";
       </section>
     </main>
     <style>
-      .grid-11 {
-        display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        gap: 10px;
-      }
-      .grid-11 img {
-        width: 100%;
-      }
+
+    .madtext {
+      margin: 30px;
+    }
+
+    p {
+      padding-bottom: 50px;
+    }
+
       .bike {
         max-width: 100%;
         position: relative;
-        margin-top: 20%;
+        margin-top: 12%;
       }
       .grid_1-1 img {
         max-width: 90%;
         padding: 5%;
       }
-
       img {
-        max-width: 80%;
-        align-items: center;
+        max-width: 100%;
       }
       img.blade1 {
         position: relative;
@@ -115,19 +114,13 @@ import MainLayout from "../MainLayout.astro";
         max-height: 6%;
         transform: rotate(180deg);
         margin-top: 1%;
-        z-index: 2;
       }
       img.blade2 {
         max-width: auto;
         max-height: 8%;
         margin-right: 200px;
-
-        z-index: 2;
       }
 
-      .bestik {
-        max-height: 15%;
-      }
 
       .grid_1-1-1 {
         display: grid;
@@ -141,27 +134,23 @@ import MainLayout from "../MainLayout.astro";
       }
 
       .knap2 {
-        margin: 0 auto;
-        margin-top: 100px;
+        margin-left: 18%;
         width: fit-content;
       }
       .sektion {
         margin-top: 50px;
         margin-bottom: 50px;
       }
-      .knap2 {
-        margin-left: 90px;
-        margin-top: -0px;
-      }
-
-     
-      .madtext {
-        margin-left: 30px;
-        margin-right: 20px;
+      .sektion1 {
+        margin-top: 50px;
+        margin-bottom: 50px;
       }
       .book1 {
         margin-left: 20px;
         margin-right: 20px;
+      }
+      .omos {
+        margin: 30px;
       }
       @media screen and (max-width: 768px) {
         .bike {
@@ -186,6 +175,9 @@ import MainLayout from "../MainLayout.astro";
         .blade1 {
           display: none;
         }
+        .pil {
+          display: none;
+        }
       }
 
       @media screen and (min-width: 768px) {
@@ -193,47 +185,129 @@ import MainLayout from "../MainLayout.astro";
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 130px;
-          margin: 0px;
         }
 
-        .grid_1-1 img {
-          margin-top: 20%;
+        .box {
+          width: 100%;
+          height: 100vh;
         }
+        .box img {
+          margin-top: 5%;
+          margin-bottom: 6%;
+          margin-left: 3%;
+        }
+.omos {
+  margin-top: 26%;
+  margin-right: 15%;
+}
+        .grid_1-1 img {
+          max-width: 100%;
+          padding: 5%;
+
+}
 
         .grid_1-1-1 {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          gap: 9px;
-          margin: 60px;
+          gap: 40px;
+          padding-top: 50px;
         }
         .index1 {
-          max-height: 84%;
+          max-height: 80%;
+          width: 100%;
+        }
+
+        .index2 {
+          max-height: 90%;
           width: 100%;
         }
         .front {
           display: grid;
           grid-template-columns: 1fr 1fr;
+          height: 60vh;
         }
         .book1 {
-          margin-left: 22%;
+          margin-left: 25%;
           margin-top: 7%;
-          margin-bottom: 9%;
+          height: 75vh;
         }
 
         .madtext {
           margin-left: 70px;
         }
         .pizza1 {
-          z-index: 2;
           max-height: 38%;
         }
         .pizza3 {
-          z-index: 2;
           max-height: 25%;
           margin-left: -40px;
           margin-bottom: -120px;
         }
+        .pil {
+          margin-left: 49%;
+          margin-top: 4%;
+          cursor: pointer;
+        }
+        .sektion1 img {
+          margin-top: 28%;
+          margin-left: 2%;
+        }
+        .mc.enlarged {
+            transform: scale(1.05); 
       }
+      .index1.enlarged {
+            transform: scale(1.05); 
+      }
+      .index2.enlarged {
+            transform: scale(1.05); 
+      }
+      .index3.enlarged {
+            transform: scale(1.05); 
+      }
+
     </style>
   </body>
+  <script>
+
+    document. querySelector('.pil').addEventListener('click', () => {
+      document.getElementById('sektion1').scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    const image = document.querySelector('.mc');
+
+    image.addEventListener('mouseenter', () => {
+        image.classList.add('enlarged');
+    });
+    image.addEventListener('mouseleave', () => {
+        image.classList.remove('enlarged');
+    });
+
+    const image1 = document.querySelector('.index1');
+
+    image1.addEventListener('mouseenter', () => {
+        image1.classList.add('enlarged');
+    });
+    image1.addEventListener('mouseleave', () => {
+        image1.classList.remove('enlarged');
+    });
+
+    const image2 = document.querySelector('.index2');
+
+image2.addEventListener('mouseenter', () => {
+    image2.classList.add('enlarged');
+});
+image2.addEventListener('mouseleave', () => {
+    image2.classList.remove('enlarged');
+});
+
+const image3 = document.querySelector('.index3');
+
+image3.addEventListener('mouseenter', () => {
+    image3.classList.add('enlarged');
+});
+image3.addEventListener('mouseleave', () => {
+    image3.classList.remove('enlarged');
+});
+  </script>
+
 </MainLayout>

@@ -1,0 +1,199 @@
+---
+import "../styles/generel.css";
+import MainLayout from "../MainLayout.astro";
+---
+
+<MainLayout>
+  <main>
+    <section class="sektion">
+      <h1>Om os</h1>
+      <div class="grid_2">
+        <div>
+          <h3>Hvad du kan forvente når du bestiller hos os</h3>
+        </div>
+        <div>
+          <p>
+            Hos Bike and Bake bestræber vi os på at kunne levere en oplevelse ud
+            over det sædvanlige. Vi vil gerne have, at vores gæster mærker
+            forskellen fra en klassisk take away pizza til vores italienske
+            pizza. Vi ønsker at blive husket for kvaliteten og den autentiske
+            smag af italiensk pizza. Hos os handler det IKKE kun om maden, men om at
+            skabe en hyggelig og afslappet atmosfære. Vi streber etter å
+            levere en uforglemmelig oplevelse for vores kunder.
+            <br /><br />
+            Vi vægter en god dialog med kunden rigtig højt og skræddersyer i fællesskab
+            en menu fra vores madsortiment. Vi er også åbne for at bruge specielle
+            råvarer efter ønske.
+          </p>
+        </div>
+          <div>
+            <h3>Råvarer</h3>
+          </div>
+          <div>
+            <p>
+              Hos Bike and Bake har vi et stort fokus på at bruge gode
+              kvalitetsvarer i vores madlavning. Vi bruger tomater og mel, som
+              vi selv importerer fra producenter i Italien. Vores økologiske
+              mozzarellaost bliver produceret i Danske butikker, og resten af
+              ​​ingredienserne vi bruger er importeret fra Italien. Vi har et
+              stort fokus på at bruge kavlitetsråvarer der er velsmagende. Vi foretrækker at bruge økologiske ingredienser og
+              produkter, hvor vi kender oprindelsen fra.
+            </p>
+          </div>
+          <div>
+            <h3>Allergener</h3>
+          </div>
+          <div>
+            <p>
+              Vi vil altid sørge for at alle kunder vil kunne spise og nyde
+              maden, vi har derfor efter forespørgsel mulighed for at lave både
+              glutenfri og vegansk base til vores pizzaer. Vi tilbyder også
+              vegansk is.
+            </p>
+          </div>
+        </div>
+
+        <h1>Vores mad</h1>
+        <section class="box">s
+          <div class="grid_3">
+            <div class="mad">
+              <h3>Antipasto</h3>
+              <img class="anti" src="/img/antipasti.webp" alt="Centered Image" />
+              <p>
+                Vi serverer en type antipasto som er populær i
+                ladsdistrikterne i Italien. Den består af
+                bruschetta; ristet brød med frisk tomat, oregano og olivenolie, toppet med parmigiano ost og oliven.
+                Forretten er en smagsfuld og forfriskende start på den
+                italienske madrejse.
+              </p>
+            </div>
+    
+            <div class="mad">
+              <div class="vertical-line"></div>
+              <h3>Pizza</h3>
+              <img class="pizza1" src="/img/pizza1.webp" alt="Centered Image" />
+              <p>
+                Vores pizza menu består af 6 forskellige pizzaer; 3 vegetariske og
+              3 med kød. Menustilen er minimal, men med kvalitetsråvarer. Vores
+              filosofi er at holde menuen enkel og velsmagende. Vores mest
+              populære pizzaer er margherita, cotto og n`duja.
+              </p>
+            </div>
+    
+            <div class="mad">
+              <div class="vertical-line"></div>
+              <h3>Gelato</h3>
+              <img class="is" src="/img/is.webp" alt="Centered Image" />
+              <p>
+                Vi har 2 forskellige slags gelato; fiordilatte (mælkesmag) og
+              kaffesmag. Vi tilbyder også sorbet i to ulike varianter; mango og jordbær. Gelatoen blir lavet foran gæstene.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </MainLayout>
+    
+    <style>
+      h1 {
+        text-align: center;
+      }
+    
+      .mad h3 {
+        text-align: center;
+      }
+    
+      h3 {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+      p {
+        margin-bottom: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        gap: 20px;
+      }
+    
+      img {
+        max-width: 28%;
+        margin-left: 38%;
+      }
+    
+      .piz {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-left: 10%;
+        margin-top: 30px;
+      }
+      @media screen and (min-width: 768px) {
+        p {
+          margin-left: 30px;
+        }
+    
+        .container {
+          gap: 50px;
+        }
+        .grid_2 {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          padding: 40px;
+          gap: 10px;
+          margin-bottom: 100px;
+        }
+        .grid_3 {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          margin-bottom: 10%;
+        }
+        .sektion {
+          margin-left: 100px;
+          margin-right: 100px;
+          margin-top: 20px;
+          margin-bottom: 100px;
+        }
+        h3 {
+          font-size: 28px;
+        }
+        .mad {
+          z-index: 1;
+        }
+        .vertical-line {
+          border-left: 1px solid #cc3a25;
+          margin-top: 80px;
+          height: 400px;
+          z-index: 2;
+          position: absolute;
+        }
+        .is {
+          max-height: 24%;
+          margin-left: 43%;
+          margin-top: 2%;
+          margin-bottom: 3%;
+        }
+    
+        .anti {
+          margin-top: 10%;
+          margin-bottom:11%;
+          width: 30%;
+        }
+        .pizza1 {
+          margin-top: 5%;
+          margin-bottom: 6%;
+          width: 24%;
+        }
+    
+      }
+    </style>
+</MainLayout>    

@@ -37,7 +37,7 @@ return {
 <h1>{myData.Tittel}</h1>
 <div class="grid_1-1">
     <div>
-    <img src={myData.img} alt="kurs">
+    <img src="/img/pizzalav1.webp" alt="kurs">
 </div>
 <div class="grid_1-1-1">
     <div>
@@ -66,6 +66,10 @@ main {
     margin-bottom: 60px;
 }
 
+img {
+        width: 100%;
+    }
+
 
 @media screen and (max-width: 768px) {
 .grid_1-1-1 {
@@ -81,9 +85,7 @@ main {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
     }
-    img {
-        width: 100%;
-    }
+   
 
     main {
         margin: 100px;
