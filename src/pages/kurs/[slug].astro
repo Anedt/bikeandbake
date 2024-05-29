@@ -37,7 +37,7 @@ return {
 <h1>{myData.Tittel}</h1>
 <div class="grid_1-1">
     <div>
-    <img src="/img/pizzalav1.webp" alt="kurs">
+        <img src=`/img/${myData.img}` alt={myData.Tittel}>
 </div>
 <div class="grid_1-1-1">
     <div>
@@ -54,8 +54,8 @@ return {
     <h3>Hvad går kurset ud på?</h3>
     <p>{myData.Info}</p>
 </div>
-<div>
-    <img src={myData.illustrasjon} alt="illustrasjon">
+<div class="illu">
+    <img src=`/img/${myData.illustrasjon}` alt={myData.Tittel}>
 </div>
 </div>
 </main>
@@ -69,6 +69,11 @@ main {
 img {
         width: 100%;
     }
+
+.illu {
+    width: 40%;
+    margin: 200px;
+}
 
 
 @media screen and (max-width: 768px) {
