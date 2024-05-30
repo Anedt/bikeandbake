@@ -9,9 +9,10 @@ import MainLayout from "../MainLayout.astro";
       <h1>Om os</h1>
       <div class="grid_2">
         <div>
-          <h3>Hvad du kan forvente når du bestiller hos os</h3>
+          <img src="/img/2freshpizza.webp" alt="freshpizza">
         </div>
         <div>
+          <h3>Hvad du kan forvente når du bestiller hos os</h3>
           <p>
             Hos Bike and Bake bestræber vi os på at kunne levere en oplevelse ud
             over det sædvanlige. Vi vil gerne have, at vores gæster mærker
@@ -26,10 +27,12 @@ import MainLayout from "../MainLayout.astro";
             råvarer efter ønske.
           </p>
         </div>
-          <div>
+      </div>
+      <img class="pil1" id="råvarer" src="/img/pil.svg" alt="pil">
+      <hr>
+          <div class="grid_1" id=>
+            <div>
             <h3>Råvarer</h3>
-          </div>
-          <div>
             <p>
               Hos Bike and Bake har vi et stort fokus på at bruge gode
               kvalitetsvarer i vores madlavning. Vi bruger tomater og mel, som
@@ -41,9 +44,17 @@ import MainLayout from "../MainLayout.astro";
             </p>
           </div>
           <div>
-            <h3>Allergener</h3>
+        <img src="/img/2bord.webp" alt="bord">
           </div>
+        </div>
+        <img class="pil2" id="allergener" src="/img/pil.svg" alt="pil">
+        <hr>
+          <div class="grid_2">
+            <div>
+              <img src="/img/2olie.webp" alt="pizzaolie">
+            </div>
           <div>
+            <h3>Allergener</h3>
             <p>
               Vi vil altid sørge for at alle kunder vil kunne spise og nyde
               maden, vi har derfor efter forespørgsel mulighed for at lave både
@@ -52,7 +63,9 @@ import MainLayout from "../MainLayout.astro";
             </p>
           </div>
         </div>
-
+        <img class="pil3" src="/img/pil.svg" alt="pil">
+      
+<section class="mat" id="voresmad">
         <h1>Vores mad</h1>
         <section class="box">
           <div class="grid_3">
@@ -91,6 +104,7 @@ import MainLayout from "../MainLayout.astro";
             </div>
           </div>
         </section>
+      </section>
       </main>
     </MainLayout>
     
@@ -123,34 +137,81 @@ import MainLayout from "../MainLayout.astro";
         gap: 20px;
       }
     
-      img {
+      .grid_3 img {
         max-width: 28%;
         margin-left: 38%;
+
       }
-    
-      .piz {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
-        margin-left: 10%;
-        margin-top: 30px;
+
+      hr {
+            border: none; 
+            height: 1px; 
+            background-color: var(--quaternary);
+        }
+      
+      
+      @media screen and (max-width: 768px) {
+        .grid_1 img {
+          display: none;
+        }
+        .grid_2 img {
+        width: 65%;
+        max-height: 500px;
+        object-fit: cover;
+        margin: 10%;
+        margin-left: 15%;
       }
+      .pil {
+        display: none;
+      }
+      hr {
+        display: none;
+      }
+      .mat {
+        margin-top: 30%;
+      }
+      }
+     
       @media screen and (min-width: 768px) {
         p {
-          margin-left: 30px;
+          margin: 60px;
+          margin-top: -3%;
         }
-    
-        .container {
-          gap: 50px;
+        .grid_1 img {
+        width: 100%;
+        height: 65%;
+        object-fit: cover;
+        padding: 8%;
+      }
+      .grid_2 img {
+        width: 100%;
+        height: 65%;
+        object-fit: cover;
+        padding: 8%;
+      }
+        .grid_1 {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          margin: 5%;
+          gap: 15px;
+          margin-bottom: -6%;
         }
         .grid_2 {
           display: grid;
           grid-template-columns: 1fr 2fr;
-          padding: 40px;
-          gap: 10px;
-          margin-bottom: 100px;
+          margin: 5%;
+          gap: 15px;
+          margin-bottom: -6%;
+        }
+        .grid_2 p  {
+          margin-left: 13%;
+        }
+
+        .grid_2 h3 {
+          margin-left: 13%;
+        }
+        .grid_1 h3 {
+          margin-left: 60px;
         }
         .grid_3 {
           display: grid;
@@ -164,7 +225,8 @@ import MainLayout from "../MainLayout.astro";
           margin-bottom: 100px;
         }
         h3 {
-          font-size: 28px;
+          margin: 40px;
+          font-size: 29px;
         }
         .mad {
           z-index: 1;
@@ -182,6 +244,14 @@ import MainLayout from "../MainLayout.astro";
           margin-top: 2%;
           margin-bottom: 3%;
         }
+        .mat {
+          margin-top: 15%;
+          padding-top: 3%;
+        }
+
+        .mat p {
+          font-size: 19px;
+        }
     
         .anti {
           margin-top: 10%;
@@ -193,7 +263,26 @@ import MainLayout from "../MainLayout.astro";
           margin-bottom: 6%;
           width: 24%;
         }
+        .pil1, .pil2, .pil3 {
+          margin-left: 49%;
+          cursor: pointer;
+          margin-top: -2%;
+          margin-bottom: 12px;
+        }
     
       }
     </style>
+    <script>
+      document. querySelector('.pil1').addEventListener('click', () => {
+      document.getElementById('råvarer').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document. querySelector('.pil2').addEventListener('click', () => {
+      document.getElementById('allergener').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document. querySelector('.pil3').addEventListener('click', () => {
+      document.getElementById('voresmad').scrollIntoView({ behavior: 'smooth' });
+    });
+    </script>
 </MainLayout>    
