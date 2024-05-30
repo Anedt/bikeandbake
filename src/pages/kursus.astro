@@ -21,10 +21,10 @@ headers: {
   <main>
     <h1>Madlavningskurser</h1>
     <div class="grid_1-1">
-      <div><img src="/img/mad1.webp" alt="" /></div>
+      <div class="topers"><img src="/img/mad1.webp" alt="" /></div>
       <div>
         <img src="/img/mad2.webp" alt="" />
-        <img src="/img/topersoner.webp" alt="" />
+        <img src="/img/laverpizzer.webp" alt="" />
       </div>
     </div>
     <h3>Michele tilbyder madlavningskurser</h3>
@@ -32,9 +32,9 @@ headers: {
       Drømmer du om at mestre kunsten at lave autentisk, italiensk mad fra
       bunden? Vores madkursus er skabt for dig, der ønsker at opleve den ægte
       smag af Italien i dit eget køkken.
-    </p>
-    <p>Gennem vores mad kurser får du et indblik i hvordan ægte italiensk mad blivet lavet fra bunden. Ved at tilmelde dig skriver du til madlavning@michele.dk, hvor du skal skrive en kort beskrivelse om dig selv og hvor mange du ønsker at tage med til madlavningskurset. I kurset bliver du guided hand-to-hand om hvordan man laver en ægte italiensk ret. På vores kurser holder vi fokus på fællesskab og at have det sjovt med at lave mad - som er noget af bike and bakes primære fokus. I kurserne lærer vi dig at lave alt fra antipasto til pizza - altså ægte italiensk mad. Madkurserne er for alle aldersgrupper og holdes i grupper. Man skal ikke være på noget specifikt niveau for at kunne deltage i kurser, da vi inkluderer alle og giver jer en hjælpende hånd.</p>
-    <p>
+      <br /><br />
+    Gennem vores mad kurser får du et indblik i hvordan ægte italiensk mad blivet lavet fra bunden. Ved at tilmelde dig skriver du til madlavning@michele.dk, hvor du skal skrive en kort beskrivelse om dig selv og hvor mange du ønsker at tage med til madlavningskurset. I kurset bliver du guided hand-to-hand om hvordan man laver en ægte italiensk ret. På vores kurser holder vi fokus på fællesskab og at have det sjovt med at lave mad - som er noget af bike and bakes primære fokus. I kurserne lærer vi dig at lave alt fra antipasto til pizza - altså ægte italiensk mad. Madkurserne er for alle aldersgrupper og holdes i grupper. Man skal ikke være på noget specifikt niveau for at kunne deltage i kurser, da vi inkluderer alle og giver jer en hjælpende hånd.
+    <br /><br />
       Tag med på en kulinarisk rejse til Italien og lær at lave pasta, der vil
       imponere dine venner og familie. Tilmeld dig vores kursus i dag og oplev
       glæden ved at lave ægte, italiensk pasta fra bunden! <br> Mere info ved booking via e-mail.
@@ -55,16 +55,27 @@ return <Kurser data={kurs}/>;
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 18px;
+    margin-top: 80px;
   }
   img {
     max-width: 100%;
+    margin-bottom: 20px;
   }
   h1 {
     text-align: center;
   }
   h3 {
     text-align: left;
+  }
+
+  h3:first-of-type {
+    margin-top: -4%;
+  }
+  .topers img {
+  height: 87%;
+  width: 100%;
+  object-fit: cover;
   }
 
   main {
