@@ -2,7 +2,6 @@
 import MainLayout from "../../MainLayout.astro";
 import "../../styles/generel.css";
 
-// "https://fisxfvyrriqnsrbvxcmu.supabase.co/rest/v1/kursurs"
 
 export async function getStaticPaths () { 
     const data = await fetch(
@@ -41,7 +40,7 @@ return {
 </div>
 <div class="grid_1-1-1">
     <div>
-    <h3>Dato:</h3> <p>{myData.Date}</p>
+    <h3>Dato:</h3> <p>{myData.Date} {myData.time}</p>
 </div>
 <div>
 <h3>Sted:</h3> <p>{myData.Place}</p>
@@ -63,7 +62,6 @@ return {
 <style>
 main {
     margin: 40px;
-    margin-bottom: 60px;
 }
 
 img {
@@ -72,7 +70,7 @@ img {
 
 .illu {
     width: 40%;
-    margin: 200px;
+    margin: 120px;
 }
 
 
@@ -88,13 +86,19 @@ img {
     .grid_1-1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        gap: 10%;
     }
    
+    .grid_1-1 h3 {
+    margin-top: -5px;
+    }
+    h3 {
+        font-size: 28px;
+    }
 
     main {
-        margin: 100px;
-        margin-bottom: 60px;
+        margin-left: 8%;
+        margin-bottom: 12%;
     }
 }
 
