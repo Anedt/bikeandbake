@@ -2,6 +2,7 @@
 import MainLayout from "../MainLayout.astro";
 import "../styles/generel.css";
 import Kurser from "../components/kurser.astro";
+import Navigation from "../components/Navigation.astro";
 
 const data = await fetch(
   "https://fisxfvyrriqnsrbvxcmu.supabase.co/rest/v1/kursurs",
@@ -18,6 +19,7 @@ headers: {
 
 
 <MainLayout>
+  <Navigation />
   <main>
     <h1>Madlavningskurser</h1>
     <div class="grid_1-1">

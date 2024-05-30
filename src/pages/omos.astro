@@ -1,9 +1,10 @@
 ---
 import "../styles/generel.css";
 import MainLayout from "../MainLayout.astro";
+import Navigation from "../components/Navigation.astro";
 ---
-
 <MainLayout>
+    <Navigation />
   <main>
     <section class="sektion">
       <h1>Om os</h1>
@@ -221,7 +222,6 @@ import MainLayout from "../MainLayout.astro";
         .sektion {
           margin-left: 100px;
           margin-right: 100px;
-          margin-top: 20px;
           margin-bottom: 100px;
         }
         h3 {

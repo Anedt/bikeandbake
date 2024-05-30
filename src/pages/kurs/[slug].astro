@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../../MainLayout.astro";
 import "../../styles/generel.css";
+import Navigation from "../../components/Navigation.astro";
 
 
 export async function getStaticPaths () { 
@@ -32,6 +33,7 @@ return {
 ---
 
 <MainLayout title={myData.Tittel}>
+    <Navigation />
 <main>
 <h1>{myData.Tittel}</h1>
 <div class="grid_1-1">
@@ -51,7 +53,8 @@ return {
 </div>
 <div>
     <h3>Hvad går kurset ud på?</h3>
-    <p>{myData.Info}</p>
+    <p>{myData.Info}</p> 
+    <p>{myData.Info2}</p>
 </div>
 <div class="illu">
     <img src=`/img/${myData.illustrasjon}` alt={myData.Tittel}>
